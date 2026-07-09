@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barrionuevo Masud & Asoc. | Abogados Laborales en Córdoba | Despidos y ART</title>
   <meta name="description" content="Abogados especialistas en despidos injustificados y reclamos a la ART en Córdoba. Consulta sin cargo. Más de 200 casos exitosos. Honorarios solo si ganás.">
   <meta name="keywords" content="abogado laboral Córdoba, reclamo ART Córdoba, indemnización por despido, accidente laboral abogado, estudio jurídico laboral Argentina">
@@ -163,13 +163,14 @@
     ============================================================ */
     h1, h2, h3, .logo-name { font-family: var(--serif); }
 
+    /* ===== MEJORA DE CONTRASTE: .section-tag más oscuro ===== */
     .section-tag {
       display: inline-block;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--gold);
+      color: #A8862E; /* Dorado más oscuro para mejor contraste */
       margin-bottom: 10px;
     }
     .section-title {
@@ -940,7 +941,6 @@
       letter-spacing: .5px;
       text-transform: uppercase;
       padding: 2px 10px;
-      border-radius: 20px;
       margin-bottom: 10px;
     }
     .testim-badge-verified svg {
@@ -1582,7 +1582,7 @@
       <div class="calc-wrapper">
         <div class="form-group">
           <div class="form-label-wrap">
-            <label class="form-label">Sueldo bruto mensual ($)</label>
+            <label class="form-label" for="sueldoDespido">Sueldo bruto mensual ($)</label>
             <span class="tooltip-icon" onclick="toggleTooltip(this)">i</span>
             <span class="tooltip-text">Es el sueldo sin descuentos (jubilación, obra social, etc.)</span>
           </div>
@@ -1590,11 +1590,11 @@
         </div>
         <div class="form-group">
           <div class="form-label-wrap">
-            <label class="form-label">Antigüedad en años</label>
+            <label class="form-label" for="antiguedadDespido">Antigüedad en años</label>
             <span class="tooltip-icon" onclick="toggleTooltip(this)">i</span>
             <span class="tooltip-text">Años completos trabajados en la empresa</span>
           </div>
-          <select id="antiguedadDespido" class="form-select" onchange="calcDespido()">
+          <select id="antiguedadDespido" class="form-select" onchange="calcDespido()" aria-label="Antigüedad en años">
             <option value="0">Seleccioná</option>
             <option value="0.5">Menos de 1 año</option>
             <option value="1">1 año</option>
@@ -1607,8 +1607,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">Tipo de despido</label>
-          <select id="tipoDespido" class="form-select" onchange="calcDespido()">
+          <label class="form-label" for="tipoDespido">Tipo de despido</label>
+          <select id="tipoDespido" class="form-select" onchange="calcDespido()" aria-label="Tipo de despido">
             <option value="1">Sin causa (indemnización normal)</option>
             <option value="1.8">Despido discriminatorio / Doble indemnización</option>
           </select>
@@ -1628,7 +1628,7 @@
       <div class="calc-wrapper">
         <div class="form-group">
           <div class="form-label-wrap">
-            <label class="form-label">Sueldo bruto mensual ($)</label>
+            <label class="form-label" for="sueldoArt">Sueldo bruto mensual ($)</label>
             <span class="tooltip-icon" onclick="toggleTooltip(this)">i</span>
             <span class="tooltip-text">Es el sueldo sin descuentos</span>
           </div>
@@ -1636,11 +1636,11 @@
         </div>
         <div class="form-group">
           <div class="form-label-wrap">
-            <label class="form-label">Porcentaje de incapacidad (%)</label>
+            <label class="form-label" for="incapacidadArt">Porcentaje de incapacidad (%)</label>
             <span class="tooltip-icon" onclick="toggleTooltip(this)">i</span>
             <span class="tooltip-text">Determinado por peritos médicos. A mayor % mayor indemnización.</span>
           </div>
-          <select id="incapacidadArt" class="form-select" onchange="calcArt()">
+          <select id="incapacidadArt" class="form-select" onchange="calcArt()" aria-label="Porcentaje de incapacidad">
             <option value="0">Seleccioná</option>
             <option value="10">10% - Incapacidad leve</option>
             <option value="20">20%</option>
@@ -1651,8 +1651,8 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label">Edad del trabajador</label>
-          <select id="edadArt" class="form-select" onchange="calcArt()">
+          <label class="form-label" for="edadArt">Edad del trabajador</label>
+          <select id="edadArt" class="form-select" onchange="calcArt()" aria-label="Edad del trabajador">
             <option value="1.1">Menos de 35 años</option>
             <option value="1">Entre 35 y 45 años</option>
             <option value="0.9">Entre 45 y 55 años</option>
@@ -1902,9 +1902,9 @@
           <div class="contacto-dato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div> Tucumán 41, Oficina 43, Córdoba</div>
         </div>
 
-        <!-- Google Maps con dirección corregida -->
+        <!-- ===== MAPA CON TITLE CORREGIDO ===== -->
         <div class="contacto-mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9949217348235!2d-64.19068162539712!3d-31.414265996147062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2821401669f%3A0x164b7153a4dc6fca!2sTucum%C3%A1n%2041%2C%20X5000JQD%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1783605899022!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9949217348235!2d-64.19068162539712!3d-31.414265996147062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2821401669f%3A0x164b7153a4dc6fca!2sTucum%C3%A1n%2041%2C%20X5000JQD%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1783605899022!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación del estudio en Tucumán 41, Oficina 43, Córdoba"></iframe>
         </div>
 
         <div style="margin-top:14px;">
