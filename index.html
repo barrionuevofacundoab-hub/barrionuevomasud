@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Barrionuevo Masud & Asoc. | Abogados Laborales y ART en Córdoba</title>
   <meta name="description" content="Especialistas en despidos injustificados y reclamos a la ART en Córdoba. Consulta gratuita. Más de 200 casos exitosos. Solo cobramos si ganás.">
   <meta name="keywords" content="abogado laboral Córdoba, reclamo ART Córdoba, indemnización por despido, accidente laboral abogado">
@@ -58,26 +58,24 @@
 
   <style>
     /* ============================================================
-       RESET & VARIABLES (Paleta renovada: Negro intenso, dorado, gris platino, acento naranja)
+       RESET & VARIABLES (Paleta formal: azul marino, acero, blanco)
     ============================================================ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --black:       #0B0C10;
-      --charcoal:    #1A1A1D;
-      --dark-gold:   #B8860B;
-      --gold:        #D4AF37;
-      --light-gold:  #F5E5B8;
-      --platinum:    #E5E7EB;
-      --gray-soft:   #F3F4F6;
+      --navy:        #0A192F;
+      --deep-blue:   #0B2B4A;
+      --blue-accent: #1E4A7A;
+      --steel:       #4A6A8F;
+      --light-steel: #B0C4DE;
+      --platinum:    #F0F4F8;
       --white:       #FFFFFF;
-      --orange-accent: #E07A2F;
-      --red-accent:  #C73B2B;
+      --off-white:   #F8FAFC;
 
-      --text-dark:   #1E1E24;
-      --text-light:  #F8F9FA;
-      --shadow:      0 12px 30px rgba(0,0,0,0.2);
-      --shadow-hover:0 20px 40px rgba(0,0,0,0.3);
+      --text-dark:   #102A43;
+      --text-light:  #F0F4F8;
+      --shadow:      0 12px 30px rgba(10, 25, 47, 0.15);
+      --shadow-hover:0 20px 40px rgba(10, 25, 47, 0.2);
 
       --serif:       'Playfair Display', serif;
       --sans:        'Inter', system-ui, sans-serif;
@@ -108,25 +106,25 @@
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--dark-gold);
-      background: rgba(184, 134, 11, 0.08);
+      color: var(--blue-accent);
+      background: rgba(30, 74, 122, 0.06);
       padding: 4px 14px;
       border-radius: 30px;
       margin-bottom: 12px;
-      border: 1px solid rgba(184, 134, 11, 0.15);
+      border: 1px solid rgba(30, 74, 122, 0.10);
     }
     .title {
       font-family: var(--serif);
       font-size: clamp(32px, 4.5vw, 52px);
       font-weight: 800;
       line-height: 1.1;
-      color: var(--black);
+      color: var(--navy);
       margin-bottom: 16px;
     }
-    .title em { font-style: italic; color: var(--dark-gold); }
+    .title em { font-style: italic; color: var(--blue-accent); }
     .subtitle {
       font-size: 17px;
-      color: #4A4A50;
+      color: #334E68;
       max-width: 620px;
       line-height: 1.7;
     }
@@ -134,14 +132,14 @@
     .mx-auto { margin-left: auto; margin-right: auto; }
 
     /* ============================================================
-       BOTONES (más agresivos)
+       BOTONES (profesionales)
     ============================================================ */
     .btn-primary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: linear-gradient(135deg, var(--dark-gold), var(--gold));
+      background: var(--blue-accent);
       color: var(--white);
       font-weight: 700;
       font-size: 15px;
@@ -149,32 +147,32 @@
       border-radius: 60px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(184, 134, 11, 0.35);
+      box-shadow: 0 6px 18px rgba(30, 74, 122, 0.25);
       transition: var(--transition);
       min-height: 56px;
       text-align: center;
       letter-spacing: 0.3px;
     }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(184, 134, 11, 0.45); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(30, 74, 122, 0.35); background: #0F3B5E; }
 
     .btn-secondary {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--navy);
       font-weight: 600;
       font-size: 15px;
       padding: 14px 34px;
       border-radius: 60px;
-      border: 1.5px solid rgba(255,255,255,0.2);
+      border: 1.5px solid rgba(10, 25, 47, 0.15);
       cursor: pointer;
       transition: var(--transition);
       min-height: 56px;
       text-align: center;
     }
-    .btn-secondary:hover { background: #2A2A30; border-color: rgba(255,255,255,0.4); }
+    .btn-secondary:hover { background: var(--off-white); border-color: var(--blue-accent); }
 
     .btn-outline {
       display: inline-flex;
@@ -198,7 +196,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: var(--orange-accent);
+      background: var(--steel);
       color: var(--white);
       font-weight: 700;
       font-size: 15px;
@@ -206,22 +204,22 @@
       border-radius: 60px;
       border: none;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(224, 122, 47, 0.35);
+      box-shadow: 0 6px 18px rgba(74, 106, 143, 0.25);
       transition: var(--transition);
       min-height: 56px;
     }
-    .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(224, 122, 47, 0.5); background: #D06A20; }
+    .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(74, 106, 143, 0.35); background: #3A5A7A; }
 
     /* ============================================================
-       HEADER (más oscuro, con dorado)
+       HEADER (formal, azul profundo)
     ============================================================ */
     .header {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(11, 12, 16, 0.96);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+      background: rgba(10, 25, 47, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .header-inner {
       max-width: 1240px; margin: 0 auto; padding: 0 20px;
@@ -230,21 +228,48 @@
     }
     .logo { display: flex; align-items: center; gap: 12px; }
     .logo-icon {
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.15);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
       border-radius: 10px;
       padding: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: var(--transition);
+      flex-shrink: 0;
     }
-    .logo:hover .logo-icon { background: rgba(212, 175, 55, 0.18); transform: scale(1.04); }
+    .logo:hover .logo-icon { background: rgba(255,255,255,0.08); transform: scale(1.04); }
     .logo-icon svg { width: 34px; height: 34px; }
     .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
     .logo-name { font-family: var(--serif); font-weight: 700; font-size: 16px; color: var(--white); letter-spacing: 0.3px; }
-    .logo-firma { font-size: 12px; font-weight: 400; color: var(--gold); }
-    .logo-sub { font-size: 8px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 1px; }
+    .logo-firma { font-size: 12px; font-weight: 400; color: var(--light-steel); }
+    .logo-sub { font-size: 8px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-top: 1px; }
+    
+    @media (max-width: 768px) {
+      .header-inner { padding: 0 12px; height: 64px; }
+      .logo-name { font-size: 14px; }
+      .logo-firma { font-size: 10px; }
+      .logo-sub { font-size: 7px; letter-spacing: 1.5px; }
+      .logo-icon svg { width: 28px; height: 28px; }
+      .logo { gap: 8px; }
+    }
+    
+    @media (max-width: 480px) {
+      .header-inner { padding: 0 10px; height: 60px; }
+      .logo-name { font-size: 12px; }
+      .logo-firma { font-size: 8px; }
+      .logo-sub { font-size: 6px; letter-spacing: 1px; }
+      .logo-icon svg { width: 24px; height: 24px; }
+      .logo { gap: 6px; }
+    }
+
+    @media (max-width: 380px) {
+      .logo-name { font-size: 10px; }
+      .logo-firma { font-size: 7px; }
+      .logo-sub { display: none; }
+      .logo-icon svg { width: 20px; height: 20px; }
+      .logo { gap: 4px; }
+    }
 
     .nav { display: flex; align-items: center; gap: 2px; }
     .nav-link {
@@ -256,55 +281,63 @@
       transition: var(--transition);
       white-space: nowrap;
     }
-    .nav-link:hover { color: var(--white); background: rgba(212, 175, 55, 0.08); }
+    .nav-link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
     .nav-cta {
-      background: linear-gradient(135deg, var(--dark-gold), var(--gold)) !important;
+      background: var(--blue-accent) !important;
       color: var(--white) !important;
       padding: 8px 22px !important;
       margin-left: 10px;
       font-weight: 600 !important;
-      box-shadow: 0 2px 12px rgba(184, 134, 11, 0.3);
+      box-shadow: 0 2px 12px rgba(30, 74, 122, 0.3);
     }
-    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4) !important; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(30, 74, 122, 0.4) !important; }
 
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
     .menu-toggle span { display: block; width: 24px; height: 2.5px; background: var(--white); border-radius: 4px; transition: var(--transition); }
 
     /* ============================================================
-       HERO (con énfasis en ART)
+       HERO (con imagen de fondo optimizada para móvil)
     ============================================================ */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      background: linear-gradient(145deg, #0B0C10 0%, #1A1A24 55%, #0B0C10 100%);
       position: relative;
       overflow: hidden;
       padding-top: 74px;
+      background: var(--navy);
     }
-    .hero-bg-pattern {
+    .hero-bg-image {
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px);
-      background-size: 40px 40px;
+      background-image: url('https://i.imgur.com/tVjPdE6.png');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.70;
+      filter: grayscale(0.05) blur(0px);
+      z-index: 0;
+      transform: scale(1.02);
     }
-    .hero-glow {
-      position: absolute;
-      top: -20%;
-      right: -10%;
-      width: 55%;
-      height: 80%;
-      background: radial-gradient(ellipse, rgba(212, 175, 55, 0.07), transparent 65%);
-      pointer-events: none;
+    @media (max-width: 768px) {
+      .hero-bg-image {
+        background-position: center 20%;
+        transform: scale(1.15);
+        opacity: 0.75;
+        filter: grayscale(0) blur(0px);
+      }
     }
-    .hero-glow2 {
+    @media (max-width: 480px) {
+      .hero-bg-image {
+        background-position: center 15%;
+        transform: scale(1.25);
+        opacity: 0.80;
+      }
+    }
+    .hero-overlay {
       position: absolute;
-      bottom: -20%;
-      left: -10%;
-      width: 45%;
-      height: 70%;
-      background: radial-gradient(ellipse, rgba(224, 122, 47, 0.06), transparent 60%);
-      pointer-events: none;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(10, 25, 47, 0.82) 0%, rgba(10, 25, 47, 0.50) 60%, rgba(10, 25, 47, 0.75) 100%);
+      z-index: 1;
     }
     .hero-inner {
       position: relative;
@@ -321,9 +354,9 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(212, 175, 55, 0.10);
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      color: var(--gold);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--light-steel);
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -337,7 +370,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--gold);
+      background: var(--light-steel);
       animation: pulse-dot 1.8s ease-in-out infinite;
     }
     @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
@@ -349,10 +382,10 @@
       color: var(--white);
       margin-bottom: 16px;
     }
-    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-title em { font-style: italic; color: var(--light-steel); }
     .hero-sub {
       font-size: 17px;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.72);
       line-height: 1.7;
       max-width: 520px;
       margin-bottom: 28px;
@@ -361,95 +394,77 @@
     .hero-stats {
       display: flex;
       gap: 1px;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.04);
       border-radius: var(--radius);
       overflow: hidden;
     }
     .hero-stat {
       flex: 1;
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.2);
       padding: 16px 14px;
       text-align: center;
       backdrop-filter: blur(8px);
     }
-    .hero-stat-num { font-family: var(--serif); font-size: 24px; font-weight: 900; color: var(--gold); }
-    .hero-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 4px; letter-spacing: 0.5px; }
+    .hero-stat-num { font-family: var(--serif); font-size: 24px; font-weight: 900; color: var(--light-steel); }
+    .hero-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 4px; letter-spacing: 0.5px; }
 
-    /* Hero mini-form */
+    /* Hero mini-form - AHORA SOLO EL BOTÓN GRANDE */
     .hero-mini-form {
       margin-top: 18px;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.02);
       border-radius: var(--radius);
       padding: 16px;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.04);
     }
     .hero-mini-form .form-row {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      justify-content: center;
     }
-    .hero-mini-form .form-row input {
-      flex: 2;
-      min-width: 140px;
-      padding: 12px 16px;
-      border-radius: 60px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-      color: var(--white);
-      font-size: 14px;
-      font-family: var(--sans);
-      min-height: 52px;
+    .hero-mini-form .form-row .btn-primary {
+      flex: 1;
+      min-width: 200px;
+      font-size: 16px;
+      padding: 16px 34px;
     }
-    .hero-mini-form .form-row input::placeholder { color: rgba(255,255,255,0.35); }
-    .hero-mini-form .form-row input:focus { outline: none; border-color: var(--gold); background: rgba(255,255,255,0.08); }
-    .hero-mini-form .form-row .btn-primary { flex: 1; min-width: 120px; font-size: 14px; }
-    .hero-mini-form .form-note { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 10px; text-align: center; }
+    .hero-mini-form .form-note { 
+      font-size: 11px; 
+      color: rgba(255,255,255,0.25); 
+      margin-top: 10px; 
+      text-align: center; 
+    }
 
+    /* Hero panel (traslúcido) */
     .hero-panel {
-      background: rgba(255,255,255,0.03);
+      background: rgba(255,255,255,0.02);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.04);
       border-radius: var(--radius-xl);
       padding: 32px;
     }
     .hero-panel-title { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-    .hero-panel-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
+    .hero-panel-sub { font-size: 13px; color: rgba(255,255,255,0.35); margin-bottom: 18px; }
     .hero-panel-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .hero-panel-list li {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 11px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      color: rgba(255,255,255,0.7);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.65);
       font-size: 13px;
     }
-    .hero-panel-list li:last-child { border-bottom: none; }
-    .hero-panel-list li svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
-
-    .hero-panel-img {
-      width:100%; height:180px; border-radius:12px; overflow:hidden; margin-bottom:18px; position:relative;
-    }
-    .hero-panel-img img {
-      width:100%; height:100%; object-fit:cover; object-position:center top;
-    }
-    .hero-panel-img .overlay {
-      position:absolute; inset:0; background:linear-gradient(to top, rgba(11,12,16,0.7) 0%, transparent 55%);
-    }
-    .hero-panel-img .label {
-      position:absolute; bottom:12px; left:14px;
-      font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
-      color: var(--gold);
-    }
+    .hero-panel-list li svg { width: 16px; height: 16px; color: var(--light-steel); flex-shrink: 0; }
 
     /* ============================================================
-       URGENCIA (FOMO)
+       FOMO BAR (azul formal)
     ============================================================ */
     .fomo-bar {
-      background: var(--charcoal);
+      background: var(--deep-blue);
       padding: 16px 0;
-      border-top: 1px solid rgba(212, 175, 55, 0.08);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+      border-top: 1px solid rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
     }
     .fomo-inner {
       display: flex;
@@ -459,16 +474,16 @@
       flex-wrap: wrap;
       text-align: center;
     }
-    .fomo-item { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.6); font-size: 14px; }
-    .fomo-item strong { color: var(--gold); font-size: 18px; font-family: var(--serif); }
-    .fomo-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.06); }
-    .fomo-plazo { color: rgba(255,255,255,0.4); font-size: 12px; }
-    .fomo-plazo strong { color: var(--orange-accent); font-weight: 700; }
+    .fomo-item { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.5); font-size: 14px; }
+    .fomo-item strong { color: var(--light-steel); font-size: 18px; font-family: var(--serif); }
+    .fomo-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.05); }
+    .fomo-plazo { color: rgba(255,255,255,0.35); font-size: 12px; }
+    .fomo-plazo strong { color: var(--white); font-weight: 700; }
 
     /* ============================================================
-       SERVICIOS (DESTACADO ART)
+       SERVICIOS (azul/blanco)
     ============================================================ */
-    .services { padding: 80px 0; background: var(--gray-soft); }
+    .services { padding: 80px 0; background: var(--off-white); }
     .services-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -479,8 +494,8 @@
       background: var(--white);
       border-radius: var(--radius-xl);
       padding: 36px 32px;
-      border: 1px solid rgba(0,0,0,0.04);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10, 25, 47, 0.04);
+      box-shadow: 0 4px 16px rgba(10, 25, 47, 0.02);
       transition: var(--transition);
       position: relative;
       overflow: hidden;
@@ -490,25 +505,25 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--dark-gold), var(--gold));
+      background: linear-gradient(90deg, var(--blue-accent), var(--steel));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.4s ease;
     }
-    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(184, 134, 11, 0.1); }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: rgba(30, 74, 122, 0.08); }
     .service-card:hover::after { transform: scaleX(1); }
     .service-card .icon {
       width: 52px; height: 52px;
-      background: rgba(184, 134, 11, 0.06);
+      background: rgba(30, 74, 122, 0.04);
       border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 16px;
     }
-    .service-card .icon svg { width: 24px; height: 24px; color: var(--dark-gold); }
-    .service-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
-    .service-card p { font-size: 14px; color: #4A4A50; line-height: 1.7; margin-bottom: 18px; }
+    .service-card .icon svg { width: 24px; height: 24px; color: var(--blue-accent); }
+    .service-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .service-card p { font-size: 14px; color: #334E68; line-height: 1.7; margin-bottom: 18px; }
     .service-card .check-list { list-style: none; margin-bottom: 20px; }
     .service-card .check-list li {
       display: flex;
@@ -516,20 +531,20 @@
       gap: 10px;
       padding: 6px 0;
       font-size: 14px;
-      color: #4A4A50;
+      color: #334E68;
     }
-    .service-card .check-list li svg { width: 16px; height: 16px; color: var(--dark-gold); flex-shrink: 0; margin-top: 3px; }
+    .service-card .check-list li svg { width: 16px; height: 16px; color: var(--blue-accent); flex-shrink: 0; margin-top: 3px; }
 
     /* ============================================================
-       ART DESTACADO (nuevo bloque con énfasis)
+       ART DESTACADO (azul profundo)
     ============================================================ */
     .art-hero {
-      background: var(--black);
+      background: var(--navy);
       padding: 80px 0;
       position: relative;
       overflow: hidden;
-      border-top: 1px solid rgba(212, 175, 55, 0.08);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+      border-top: 1px solid rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
     }
     .art-hero .art-glow {
       position: absolute;
@@ -537,14 +552,14 @@
       right: -5%;
       width: 50%;
       height: 80%;
-      background: radial-gradient(ellipse, rgba(212, 175, 55, 0.04), transparent 60%);
+      background: radial-gradient(ellipse, rgba(176, 196, 222, 0.04), transparent 60%);
       pointer-events: none;
     }
     .art-hero .container { position: relative; z-index: 2; }
-    .art-hero .tag { color: var(--orange-accent); background: rgba(224, 122, 47, 0.08); border-color: rgba(224, 122, 47, 0.15); }
+    .art-hero .tag { color: var(--light-steel); background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
     .art-hero .title { color: var(--white); }
-    .art-hero .title em { color: var(--orange-accent); }
-    .art-hero .subtitle { color: rgba(255,255,255,0.6); }
+    .art-hero .title em { color: var(--light-steel); }
+    .art-hero .subtitle { color: rgba(255,255,255,0.5); }
     .art-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -552,34 +567,34 @@
       margin: 36px 0 32px;
     }
     .art-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.03);
       border-radius: var(--radius);
       padding: 24px 22px;
       transition: var(--transition);
     }
-    .art-card:hover { background: rgba(255,255,255,0.06); border-color: rgba(212, 175, 55, 0.15); }
+    .art-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); }
     .art-card .icon {
       width: 40px; height: 40px;
-      background: rgba(212, 175, 55, 0.08);
+      background: rgba(176, 196, 222, 0.04);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 12px;
     }
-    .art-card .icon svg { width: 20px; height: 20px; color: var(--gold); }
+    .art-card .icon svg { width: 20px; height: 20px; color: var(--light-steel); }
     .art-card h3 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
-    .art-card p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .art-card p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
     .art-callout {
-      background: rgba(224, 122, 47, 0.06);
-      border: 1px solid rgba(224, 122, 47, 0.12);
+      background: rgba(176, 196, 222, 0.04);
+      border: 1px solid rgba(176, 196, 222, 0.08);
       border-radius: var(--radius);
       padding: 16px 24px;
       text-align: center;
       margin-bottom: 32px;
     }
-    .art-callout p { font-size: 15px; font-weight: 600; color: var(--gold); }
+    .art-callout p { font-size: 15px; font-weight: 600; color: var(--light-steel); }
     .art-callout p strong { color: var(--white); font-weight: 700; }
 
     /* ============================================================
@@ -589,7 +604,7 @@
     .calc-tabs {
       display: flex;
       gap: 6px;
-      background: var(--gray-soft);
+      background: var(--off-white);
       padding: 6px;
       border-radius: 60px;
       max-width: 480px;
@@ -607,17 +622,18 @@
       border: none;
       transition: all 0.2s;
       min-height: 48px;
+      color: var(--text-dark);
     }
-    .calc-tab.active { background: var(--black); color: var(--white); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .calc-tab.active { background: var(--navy); color: var(--white); box-shadow: 0 4px 12px rgba(10, 25, 47, 0.10); }
     .calc-panel { display: none; }
     .calc-panel.active { display: block; }
     .calc-wrapper {
-      background: var(--gray-soft);
+      background: var(--off-white);
       border-radius: var(--radius-xl);
       padding: 32px 28px;
       max-width: 520px;
       margin: 0 auto;
-      border: 1px solid rgba(0,0,0,0.02);
+      border: 1px solid rgba(10, 25, 47, 0.02);
     }
     .calc-wrapper .form-group { margin-bottom: 18px; }
     .calc-wrapper .form-label {
@@ -625,7 +641,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #4A4A50;
+      color: #334E68;
       display: block;
       margin-bottom: 4px;
     }
@@ -633,32 +649,33 @@
     .calc-wrapper .form-select {
       width: 100%;
       padding: 12px 14px;
-      border: 1.5px solid rgba(0,0,0,0.06);
+      border: 1.5px solid rgba(10, 25, 47, 0.06);
       border-radius: var(--radius);
       font-size: 15px;
       font-family: var(--sans);
       background: var(--white);
       min-height: 52px;
+      color: var(--text-dark);
     }
     .calc-wrapper .form-input:focus,
-    .calc-wrapper .form-select:focus { outline: none; border-color: var(--dark-gold); }
+    .calc-wrapper .form-select:focus { outline: none; border-color: var(--blue-accent); }
     .result-box {
-      background: var(--black);
+      background: var(--navy);
       border-radius: var(--radius);
       padding: 18px;
       margin-top: 16px;
       display: none;
     }
     .result-box.show { display: block; }
-    .result-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); }
+    .result-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--light-steel); }
     .result-value { font-family: var(--serif); font-size: 28px; font-weight: 800; color: var(--white); }
-    .result-note { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px; }
-    .result-detail { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 10px; }
+    .result-note { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 6px; }
+    .result-detail { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 10px; }
 
     /* ============================================================
        TESTIMONIOS
     ============================================================ */
-    .testimonials { padding: 80px 0; background: var(--gray-soft); }
+    .testimonials { padding: 80px 0; background: var(--off-white); }
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -669,23 +686,23 @@
       background: var(--white);
       border-radius: var(--radius-xl);
       padding: 28px 24px;
-      border: 1px solid rgba(0,0,0,0.02);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid rgba(10, 25, 47, 0.02);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.02);
       transition: var(--transition);
     }
     .testim-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .testim-card .stars { display: flex; gap: 3px; margin-bottom: 10px; }
-    .testim-card .stars svg { width: 14px; height: 14px; color: var(--gold); fill: var(--gold); }
-    .testim-card blockquote { font-size: 14px; color: #4A4A50; line-height: 1.7; font-style: italic; margin-bottom: 18px; }
+    .testim-card .stars svg { width: 14px; height: 14px; color: var(--blue-accent); fill: var(--blue-accent); }
+    .testim-card blockquote { font-size: 14px; color: #334E68; line-height: 1.7; font-style: italic; margin-bottom: 18px; }
     .testim-author { display: flex; align-items: center; gap: 14px; }
     .testim-avatar {
       width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--dark-gold), var(--gold));
+      background: linear-gradient(135deg, var(--blue-accent), var(--steel));
       display: flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 16px; color: var(--white);
     }
-    .testim-name { font-weight: 700; font-size: 14px; color: var(--black); }
-    .testim-role { font-size: 12px; color: #6B6B70; }
+    .testim-name { font-weight: 700; font-size: 14px; color: var(--navy); }
+    .testim-role { font-size: 12px; color: #627D98; }
 
     /* ============================================================
        PROCESO
@@ -705,34 +722,34 @@
       left: calc(12.5% + 20px);
       right: calc(12.5% + 20px);
       height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--dark-gold), var(--gold));
+      background: linear-gradient(90deg, var(--blue-accent), var(--steel), var(--blue-accent));
       opacity: 0.15;
     }
     .step {
       text-align: center;
       padding: 28px 16px;
-      background: var(--gray-soft);
+      background: var(--off-white);
       border-radius: var(--radius-xl);
-      border: 1px solid rgba(0,0,0,0.02);
+      border: 1px solid rgba(10, 25, 47, 0.02);
       transition: var(--transition);
     }
     .step:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .step .num {
       width: 48px; height: 48px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--dark-gold), var(--gold));
+      background: linear-gradient(135deg, var(--blue-accent), var(--steel));
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 14px;
       font-family: var(--serif); font-size: 18px; font-weight: 800; color: var(--white);
-      box-shadow: 0 4px 12px rgba(184, 134, 11, 0.2);
+      box-shadow: 0 4px 12px rgba(30, 74, 122, 0.15);
     }
-    .step h3 { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--black); margin-bottom: 6px; }
-    .step p { font-size: 13px; color: #4A4A50; line-height: 1.6; }
+    .step h3 { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .step p { font-size: 13px; color: #334E68; line-height: 1.6; }
 
     /* ============================================================
        FAQ
     ============================================================ */
-    .faq { padding: 80px 0; background: var(--gray-soft); }
+    .faq { padding: 80px 0; background: var(--off-white); }
     .faq-grid {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
@@ -741,13 +758,13 @@
     }
     .faq-list { display: flex; flex-direction: column; gap: 8px; }
     .faq-item {
-      border: 1px solid rgba(0,0,0,0.04);
+      border: 1px solid rgba(10, 25, 47, 0.04);
       border-radius: var(--radius);
       overflow: hidden;
       background: var(--white);
       transition: var(--transition);
     }
-    .faq-item.active { border-color: var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .faq-item.active { border-color: var(--blue-accent); box-shadow: 0 4px 12px rgba(10, 25, 47, 0.02); }
     .faq-btn {
       width: 100%;
       padding: 16px 20px;
@@ -762,27 +779,27 @@
       font-family: var(--sans);
       font-weight: 600;
       font-size: 14px;
-      color: var(--black);
+      color: var(--navy);
       transition: var(--transition);
       min-height: 52px;
     }
-    .faq-btn:hover { background: rgba(0,0,0,0.01); }
-    .faq-item.active .faq-btn { background: rgba(184, 134, 11, 0.02); }
+    .faq-btn:hover { background: rgba(10, 25, 47, 0.01); }
+    .faq-item.active .faq-btn { background: rgba(30, 74, 122, 0.02); }
     .faq-plus {
       width: 20px; height: 20px;
-      color: var(--dark-gold);
+      color: var(--blue-accent);
       flex-shrink: 0;
       transition: transform 0.25s ease;
     }
     .faq-item.active .faq-plus { transform: rotate(45deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-answer-inner { padding: 0 20px 16px; font-size: 14px; color: #4A4A50; line-height: 1.7; }
+    .faq-answer-inner { padding: 0 20px 16px; font-size: 14px; color: #334E68; line-height: 1.7; }
 
     /* ============================================================
        CONTACTO
     ============================================================ */
     .contact {
-      background: var(--black);
+      background: var(--navy);
       padding: 80px 0;
       position: relative;
       overflow: hidden;
@@ -790,7 +807,7 @@
     .contact-dots {
       position: absolute;
       inset: 0;
-      background-image: radial-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
       background-size: 30px 30px;
     }
     .contact .container { position: relative; z-index: 2; }
@@ -800,21 +817,21 @@
       gap: 50px;
       align-items: start;
     }
-    .contact-info .tag { color: var(--gold); background: rgba(212, 175, 55, 0.06); border-color: rgba(212, 175, 55, 0.1); }
+    .contact-info .tag { color: var(--light-steel); background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
     .contact-info .title { color: var(--white); }
-    .contact-info .subtitle { color: rgba(255,255,255,0.5); }
+    .contact-info .subtitle { color: rgba(255,255,255,0.45); }
     .contact-guarantees { display: flex; flex-direction: column; gap: 12px; margin: 24px 0; }
     .contact-guarantees .item {
       display: flex; align-items: center; gap: 14px;
       background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.03);
       border-radius: var(--radius);
       padding: 14px 16px;
       transition: var(--transition);
     }
-    .contact-guarantees .item:hover { background: rgba(255,255,255,0.04); }
-    .contact-guarantees .item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
-    .contact-guarantees .item p { font-size: 13px; color: rgba(255,255,255,0.7); }
+    .contact-guarantees .item:hover { background: rgba(255,255,255,0.03); }
+    .contact-guarantees .item svg { width: 18px; height: 18px; color: var(--light-steel); flex-shrink: 0; }
+    .contact-guarantees .item p { font-size: 13px; color: rgba(255,255,255,0.6); }
     .contact-guarantees .item strong { color: var(--white); }
 
     .form-card {
@@ -823,30 +840,44 @@
       padding: 36px 32px;
       box-shadow: var(--shadow);
     }
-    .form-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 20px; }
+    .form-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 20px; }
+    
+    @media (max-width: 768px) {
+      .form-card { padding: 28px 24px; }
+      .form-card h3 { font-size: 18px; margin-bottom: 16px; }
+      .form-group { margin-bottom: 14px; }
+      .form-input, .form-textarea { padding: 12px 14px; }
+      .btn-submit { min-height: 48px; padding: 12px; font-size: 14px; }
+    }
+    
+    @media (max-width: 480px) {
+      .form-card { padding: 20px 16px; border-radius: 12px; }
+      .form-card h3 { font-size: 16px; margin-bottom: 14px; }
+      .form-input, .form-textarea { font-size: 16px; padding: 11px 12px; }
+    }
     .form-group { margin-bottom: 16px; }
-    .form-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #4A4A50; margin-bottom: 4px; }
+    .form-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #334E68; margin-bottom: 4px; }
     .form-input, .form-textarea {
       width: 100%;
       padding: 12px 14px;
-      border: 1.5px solid rgba(0,0,0,0.06);
+      border: 1.5px solid rgba(10, 25, 47, 0.06);
       border-radius: var(--radius);
       font-family: var(--sans);
-      font-size: 15px;
-      color: var(--black);
+      font-size: 16px;
+      color: var(--text-dark);
       background: var(--white);
       transition: var(--transition);
       min-height: 52px;
     }
-    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--dark-gold); box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.05); }
+    .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(30, 74, 122, 0.04); }
     .form-textarea { resize: vertical; min-height: 90px; }
-    .form-error { font-size: 11px; color: var(--red-accent); margin-top: 4px; display: none; }
+    .form-error { font-size: 11px; color: #B22234; margin-top: 4px; display: none; }
     .form-error.show { display: block; }
     .btn-submit {
       width: 100%;
       padding: 14px;
       margin-top: 8px;
-      background: linear-gradient(135deg, var(--dark-gold), var(--gold));
+      background: var(--blue-accent);
       color: var(--white);
       font-weight: 700;
       font-size: 15px;
@@ -856,15 +887,15 @@
       transition: var(--transition);
       min-height: 56px;
     }
-    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3); }
-    .form-note { font-size: 11px; color: #6B6B70; text-align: center; margin-top: 12px; }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30, 74, 122, 0.25); }
+    .form-note { font-size: 11px; color: #627D98; text-align: center; margin-top: 12px; }
 
     /* ============================================================
        FOOTER
     ============================================================ */
     .footer {
-      background: #0B0C10;
-      border-top: 1px solid rgba(212, 175, 55, 0.04);
+      background: var(--deep-blue);
+      border-top: 1px solid rgba(255,255,255,0.03);
       padding: 40px 0 24px;
     }
     .footer-inner {
@@ -875,7 +906,7 @@
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { color: rgba(255,255,255,0.3); font-size: 13px; transition: var(--transition); }
     .footer-links a:hover { color: var(--white); }
-    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; max-width: 420px; line-height: 1.6; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.15); text-align: center; max-width: 420px; line-height: 1.6; }
 
     /* ============================================================
        WHATSAPP FLOTANTE
@@ -889,16 +920,26 @@
       height: 60px;
       border-radius: 50%;
       background: #25D366;
-      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: var(--transition);
       animation: pop-in 0.5s 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     }
-    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5); }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3); }
     .wa-float svg { width: 34px; height: 34px; fill: white; }
     @keyframes pop-in { from { opacity:0; transform: scale(0); } to { opacity:1; transform: scale(1); } }
+
+    @media (max-width: 480px) {
+      .wa-float { 
+        width: 50px; 
+        height: 50px; 
+        bottom: 16px; 
+        right: 16px; 
+      }
+      .wa-float svg { width: 28px; height: 28px; }
+    }
 
     /* ============================================================
        EXIT POPUP
@@ -907,7 +948,7 @@
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
       z-index: 9999;
-      background: rgba(0,0,0,0.7);
+      background: rgba(10, 25, 47, 0.75);
       backdrop-filter: blur(6px);
       display: none;
       align-items: center;
@@ -933,23 +974,23 @@
       border: none;
       font-size: 28px;
       cursor: pointer;
-      color: #6B6B70;
+      color: #627D98;
       transition: var(--transition);
       line-height: 1;
     }
-    .exit-popup-close:hover { color: var(--black); }
+    .exit-popup-close:hover { color: var(--navy); }
     .exit-popup-inner .popup-icon {
       width: 60px; height: 60px;
-      background: rgba(184, 134, 11, 0.06);
+      background: rgba(30, 74, 122, 0.04);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 16px;
     }
-    .exit-popup-inner .popup-icon svg { width: 28px; height: 28px; color: var(--dark-gold); }
-    .exit-popup-inner h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
-    .exit-popup-inner p { font-size: 14px; color: #4A4A50; margin-bottom: 20px; }
+    .exit-popup-inner .popup-icon svg { width: 28px; height: 28px; color: var(--blue-accent); }
+    .exit-popup-inner h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .exit-popup-inner p { font-size: 14px; color: #334E68; margin-bottom: 20px; }
     .exit-popup-inner .btn-primary { width: 100%; justify-content: center; }
 
     /* ============================================================
@@ -969,14 +1010,14 @@
       .nav {
         position: fixed;
         top: 74px; left: 0; right: 0;
-        background: rgba(11,12,16,0.98);
+        background: rgba(10, 25, 47, 0.98);
         backdrop-filter: blur(16px);
         flex-direction: column;
         padding: 16px;
         gap: 4px;
         transform: translateY(-130%);
         transition: transform 0.3s ease;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+        border-bottom: 1px solid rgba(255,255,255,0.04);
       }
       .nav.open { transform: translateY(0); }
       .nav-link { width: 100%; padding: 12px 16px; text-align: center; font-size: 15px; }
@@ -989,11 +1030,11 @@
       .fomo-inner { flex-direction: column; gap: 10px; }
       .fomo-divider { width: 60px; height: 1px; }
 
-      .hero-inner { padding: 20px 16px; }
-      .hero-title { font-size: 28px; }
+      .hero-inner { padding: 40px 16px; }
+      .hero-title { font-size: clamp(26px, 6vw, 40px); }
+      .hero-sub { font-size: 15px; }
       .hero-mini-form .form-row { flex-direction: column; }
-      .hero-mini-form .form-row input { width: 100%; flex: none; }
-      .hero-mini-form .form-row .btn-primary { width: 100%; flex: none; }
+      .hero-mini-form .form-row .btn-primary { width: 100%; flex: none; font-size: 15px; }
 
       .calc-tabs { flex-direction: column; border-radius: var(--radius); }
       .calc-tab { border-radius: var(--radius); }
@@ -1005,10 +1046,30 @@
       .step { padding: 20px 12px; }
     }
 
+    @media (max-width: 520px) {
+      .hero-bg-image { background-position: center 25%; }
+      .hero-inner { padding: 32px 12px; gap: 20px; }
+      .hero-title { font-size: clamp(22px, 5.5vw, 28px); margin-bottom: 12px; line-height: 1.15; }
+      .hero-sub { font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+      .hero-stats { gap: 0; }
+      .hero-stat { padding: 12px 10px; }
+      .hero-stat-num { font-size: 20px; }
+      .hero-stat-lbl { font-size: 9px; }
+      .hero-mini-form { padding: 12px; }
+      .hero-mini-form .form-row { gap: 8px; }
+      .btn-primary, .btn-secondary, .btn-outline { font-size: 13px; padding: 11px 20px; min-height: 46px; }
+      .hero-panel { display: none; }
+    }
+
     @media (max-width: 400px) {
-      .hero-title { font-size: 24px; }
-      .btn-primary, .btn-secondary, .btn-outline { font-size: 13px; padding: 12px 20px; min-height: 48px; }
-      .calc-wrapper { padding: 20px 16px; }
+      .hero-bg-image { background-position: center 35%; transform: scale(1.3); }
+      .hero-inner { padding: 24px 12px; gap: 16px; }
+      .hero-title { font-size: clamp(20px, 5vw, 24px); margin-bottom: 10px; }
+      .hero-sub { font-size: 13px; margin-bottom: 16px; }
+      .hero-stats { display: none; }
+      .hero-mini-form { padding: 10px; }
+      .calc-wrapper { padding: 16px 12px; }
+      .container { padding: 0 12px; }
     }
 
     /* Utilidades */
@@ -1027,21 +1088,21 @@
       <div class="logo-icon">
         <svg width="44" height="44" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5E5B8"/><stop offset="100%" stop-color="#D4AF37"/></linearGradient>
-            <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B8860B"/></linearGradient>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F0F4F8"/><stop offset="100%" stop-color="#B0C4DE"/></linearGradient>
+            <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B0C4DE"/><stop offset="100%" stop-color="#1E4A7A"/></linearGradient>
           </defs>
           <rect x="24.5" y="13" width="3" height="22" rx="1.5" fill="url(#lg2)"/>
           <rect x="16" y="41" width="20" height="3.5" rx="1.75" fill="url(#lg2)"/>
           <rect x="24.5" y="35" width="3" height="7" rx="1.5" fill="url(#lg2)"/>
           <rect x="6" y="20" width="40" height="3" rx="1.5" fill="url(#lg1)"/>
           <circle cx="26" cy="21.5" r="4.5" fill="url(#lg2)"/>
-          <circle cx="26" cy="21.5" r="2" fill="#F5E5B8"/>
-          <line x1="8" y1="23" x2="8" y2="29" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M3 29 Q8 36 13 29" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
-          <line x1="3" y1="29" x2="13" y2="29" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="44" y1="23" x2="44" y2="29" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
-          <path d="M39 29 Q44 36 49 29" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/>
-          <line x1="39" y1="29" x2="49" y2="29" stroke="#D4AF37" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="26" cy="21.5" r="2" fill="#F0F4F8"/>
+          <line x1="8" y1="23" x2="8" y2="29" stroke="#B0C4DE" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M3 29 Q8 36 13 29" fill="none" stroke="#B0C4DE" stroke-width="2" stroke-linecap="round"/>
+          <line x1="3" y1="29" x2="13" y2="29" stroke="#B0C4DE" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="44" y1="23" x2="44" y2="29" stroke="#B0C4DE" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M39 29 Q44 36 49 29" fill="none" stroke="#B0C4DE" stroke-width="2" stroke-linecap="round"/>
+          <line x1="39" y1="29" x2="49" y2="29" stroke="#B0C4DE" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </div>
       <div class="logo-text">
@@ -1068,12 +1129,11 @@
 <main>
 
 <!-- ============================================================
-     HERO
+     HERO (con imagen de fondo optimizada para móvil)
      ============================================================ -->
 <section id="inicio" class="hero">
-  <div class="hero-bg-pattern" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-glow2" aria-hidden="true"></div>
+  <div class="hero-bg-image" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-content fade-up">
       <div class="hero-badge">CÓRDOBA · ESPECIALISTAS EN DERECHO LABORAL</div>
@@ -1083,18 +1143,19 @@
       </h1>
       <p class="hero-sub">
         Abogados especialistas en reclamos a la ART y despidos. Más de 200 casos ganados. 
-        Primera consulta <strong style="color:var(--gold);">sin cargo</strong> — <strong style="color:var(--gold);">honorarios solo si ganás</strong>.
+        Primera consulta <strong style="color:var(--light-steel);">sin cargo</strong> — <strong style="color:var(--light-steel);">honorarios solo si ganás</strong>.
       </p>
       <div class="hero-actions">
         <a href="#contacto" class="btn-primary">Analizo mi caso gratis</a>
         <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="btn-secondary" onclick="gtag('event', 'conversion', {'send_to': 'AW-1749966760/SorCNSK47wcEPz4vphB', 'value': 1.0, 'currency': 'USD'});">WhatsApp directo</a>
       </div>
 
-      <!-- Hero mini-form -->
+      <!-- Hero mini-form - BOTÓN PERSUASIVO -->
       <div class="hero-mini-form">
         <div class="form-row">
-          <input type="tel" id="heroTelefono" class="form-input" placeholder="Tu teléfono" aria-label="Teléfono" style="color:white;">
-          <button class="btn-primary" id="heroBtnWhatsapp" onclick="enviarHeroWhatsapp()">Reclamar ahora</button>
+          <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20reclamar%20mi%20indemnizaci%C3%B3n%20laboral" target="_blank" rel="noopener" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-1749966760/SorCNSK47wcEPz4vphB', 'value': 1.0, 'currency': 'USD'});">
+            ⚖️ Reclamar mi indemnización ahora
+          </a>
         </div>
         <div class="form-note">Sin compromiso. Te respondemos en minutos.</div>
       </div>
@@ -1108,16 +1169,11 @@
 
     <div class="hero-visual fade-up" style="animation-delay:.15s">
       <div class="hero-panel">
-        <div class="hero-panel-img">
-          <img src="https://i.imgur.com/tVjPdE6.png" alt="Abogados laborales y trabajador en oficina" crossorigin="anonymous">
-          <div class="overlay"></div>
-          <div class="label">Defensa Laboral Real</div>
-        </div>
         <div class="hero-panel-title">Casos que atendemos</div>
         <div class="hero-panel-sub">Si alguno de estos es tu caso, tenés derecho a reclamar.</div>
         <ul class="hero-panel-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Despido sin causa justificada</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong style="color:var(--gold);">Accidente laboral</strong> no cubierto por la ART</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong style="color:var(--light-steel);">Accidente laboral</strong> no cubierto por la ART</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Alta médica antes de estar recuperado</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Enfermedad profesional rechazada</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Trabajo no registrado (en negro)</li>
@@ -1165,9 +1221,9 @@
         </ul>
         <a href="#contacto" class="btn-primary" style="padding:12px 28px; font-size:14px;">Calcular mi indemnización</a>
       </div>
-      <div class="service-card fade-up" style="border-color: rgba(184, 134, 11, 0.08);">
-        <div class="icon" style="background: rgba(224, 122, 47, 0.06);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3 style="color: var(--orange-accent);">Accidentes y ART</h3>
+      <div class="service-card fade-up" style="border-color: rgba(30, 74, 122, 0.06);">
+        <div class="icon" style="background: rgba(30, 74, 122, 0.04);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 style="color: var(--blue-accent);">Accidentes y ART</h3>
         <p><strong>La ART tiene abogados propios. Vos también merecés tener los tuyos.</strong> Peleamos para que cobres la indemnización real que te corresponde por tu incapacidad.</p>
         <ul class="check-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Impugnación de altas médicas</li>
@@ -1181,7 +1237,7 @@
 </section>
 
 <!-- ============================================================
-     ART DESTACADO (NUEVO BLOQUE CON ÉNFASIS)
+     ART DESTACADO (azul formal)
      ============================================================ -->
 <section id="art-destacado" class="art-hero">
   <div class="art-glow" aria-hidden="true"></div>
@@ -1317,17 +1373,17 @@
     <div class="testimonials-grid">
       <div class="testim-card fade-up">
         <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <blockquote>“Me despidieron de un día para el otro después de 8 años. La empresa me ofrecía la mitad de lo que correspondía. Este estudio revisó todo, encontró errores graves y terminé cobrando mucho más.”</blockquote>
+        <blockquote>"Me despidieron de un día para el otro después de 8 años. La empresa me ofrecía la mitad de lo que correspondía. Este estudio revisó todo, encontró errores graves y terminé cobrando mucho más."</blockquote>
         <div class="testim-author"><div class="testim-avatar">ML</div><div><div class="testim-name">Marcos L.</div><div class="testim-role">Operario industrial · Córdoba</div></div></div>
       </div>
       <div class="testim-card fade-up">
         <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <blockquote>“Me fracturé el hombro en obra y la ART me dio el alta a los 40 días. Todavía no podía levantar el brazo. Impugnaron el alta y logré una indemnización tres veces mayor a la oferta original.”</blockquote>
+        <blockquote>"Me fracturé el hombro en obra y la ART me dio el alta a los 40 días. Todavía no podía levantar el brazo. Impugnaron el alta y logré una indemnización tres veces mayor a la oferta original."</blockquote>
         <div class="testim-author"><div class="testim-avatar">RS</div><div><div class="testim-name">Roberto S.</div><div class="testim-role">Construcción · Córdoba</div></div></div>
       </div>
       <div class="testim-card fade-up">
         <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <blockquote>“Trabajé cinco años en negro y me despidieron cuando me embaracé. Pensaba que no tenía derechos. El estudio me explicó todo, llevó el caso y cobré una indemnización que cambió mi vida.”</blockquote>
+        <blockquote>"Trabajé cinco años en negro y me despidieron cuando me embaracé. Pensaba que no tenía derechos. El estudio me explicó todo, llevó el caso y cobré una indemnización que cambió mi vida."</blockquote>
         <div class="testim-author"><div class="testim-avatar">VG</div><div><div class="testim-name">Valeria G.</div><div class="testim-role">Comercio · Córdoba</div></div></div>
       </div>
     </div>
@@ -1364,8 +1420,8 @@
         <h2 class="title" style="font-size:30px;">Preguntas<br>Frecuentes</h2>
         <p class="subtitle">Las dudas más comunes de los trabajadores de Córdoba antes de consultar.</p>
         <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
-          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--dark-gold)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="font-size:12px; color:#6B6B70; text-transform:uppercase; letter-spacing:0.5px;">Teléfono</strong><p style="font-size:14px; font-weight:600;"><a href="tel:+543534456989" style="color:var(--black);">(353) 4456-989</a></p></div></div>
-          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--dark-gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="font-size:12px; color:#6B6B70; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong><p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p></div></div>
+          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Teléfono</strong><p style="font-size:14px; font-weight:600;"><a href="tel:+543534456989" style="color:var(--navy);">(353) 4456-989</a></p></div></div>
+          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong><p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p></div></div>
         </div>
       </div>
       <div class="faq-list fade-up">
@@ -1395,9 +1451,9 @@
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p><strong>Respuesta rápida.</strong> Respondemos en minutos.</p></div>
         </div>
         <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+543534456989" style="color:rgba(255,255,255,0.6);">(353) 4456-989</a></div>
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Córdoba Capital y toda la provincia</div>
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tucumán 41, Oficina 43, Córdoba</div>
+          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+543534456989" style="color:rgba(255,255,255,0.5);">(353) 4456-989</a></div>
+          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Córdoba Capital y toda la provincia</div>
+          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tucumán 41, Oficina 43, Córdoba</div>
         </div>
         <div style="margin-top:16px; border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,0.04);">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9949217348235!2d-64.19068162539712!3d-31.414265996147062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2821401669f%3A0x164b7153a4dc6fca!2sTucum%C3%A1n%2041%2C%20X5000JQD%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1783605899022!5m2!1ses-419!2sar" width="100%" height="180" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación del estudio en Tucumán 41, Oficina 43, Córdoba"></iframe>
@@ -1441,7 +1497,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <a href="#inicio" class="logo" style="gap:10px;">
-      <div class="logo-icon"><svg width="32" height="32" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="flg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F5E5B8"/><stop offset="100%" stop-color="#D4AF37"/></linearGradient><linearGradient id="flg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#B8860B"/></linearGradient></defs><rect x="24.5" y="13" width="3" height="22" rx="1.5" fill="url(#flg2)"/><rect x="16" y="41" width="20" height="3.5" rx="1.75" fill="url(#flg2)"/><rect x="24.5" y="35" width="3" height="7" rx="1.5" fill="url(#flg2)"/><rect x="6" y="20" width="40" height="3" rx="1.5" fill="url(#flg1)"/><circle cx="26" cy="21.5" r="4.5" fill="url(#flg2)"/><circle cx="26" cy="21.5" r="2" fill="#F5E5B8"/><line x1="8" y1="23" x2="8" y2="29" stroke="#D4AF37" stroke-width="1.5"/><path d="M3 29 Q8 36 13 29" fill="none" stroke="#D4AF37" stroke-width="2"/><line x1="3" y1="29" x2="13" y2="29" stroke="#D4AF37" stroke-width="1.5"/><line x1="44" y1="23" x2="44" y2="29" stroke="#D4AF37" stroke-width="1.5"/><path d="M39 29 Q44 36 49 29" fill="none" stroke="#D4AF37" stroke-width="2"/><line x1="39" y1="29" x2="49" y2="29" stroke="#D4AF37" stroke-width="1.5"/></svg></div>
+      <div class="logo-icon"><svg width="32" height="32" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="flg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#F0F4F8"/><stop offset="100%" stop-color="#B0C4DE"/></linearGradient><linearGradient id="flg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#B0C4DE"/><stop offset="100%" stop-color="#1E4A7A"/></linearGradient></defs><rect x="24.5" y="13" width="3" height="22" rx="1.5" fill="url(#flg2)"/><rect x="16" y="41" width="20" height="3.5" rx="1.75" fill="url(#flg2)"/><rect x="24.5" y="35" width="3" height="7" rx="1.5" fill="url(#flg2)"/><rect x="6" y="20" width="40" height="3" rx="1.5" fill="url(#flg1)"/><circle cx="26" cy="21.5" r="4.5" fill="url(#flg2)"/><circle cx="26" cy="21.5" r="2" fill="#F0F4F8"/><line x1="8" y1="23" x2="8" y2="29" stroke="#B0C4DE" stroke-width="1.5"/><path d="M3 29 Q8 36 13 29" fill="none" stroke="#B0C4DE" stroke-width="2"/><line x1="3" y1="29" x2="13" y2="29" stroke="#B0C4DE" stroke-width="1.5"/><line x1="44" y1="23" x2="44" y2="29" stroke="#B0C4DE" stroke-width="1.5"/><path d="M39 29 Q44 36 49 29" fill="none" stroke="#B0C4DE" stroke-width="2"/><line x1="39" y1="29" x2="49" y2="29" stroke="#B0C4DE" stroke-width="1.5"/></svg></div>
       <div class="logo-text"><span class="logo-name" style="color:#fff;">Barrionuevo<span class="logo-firma"> Masud &amp; Asoc.</span></span><span class="logo-sub">Estudio Jurídico Laboral</span></div>
     </a>
     <nav class="footer-links">
@@ -1475,7 +1531,7 @@
     <h3>No te vayas, es gratis y toma 2 minutos</h3>
     <p>Descubrí en minutos si tenés derecho a indemnización. Sin compromiso ni costo.</p>
     <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-1749966760/SorCNSK47wcEPz4vphB', 'value': 1.0, 'currency': 'USD'}); document.getElementById('exitPopup').classList.remove('show');">Consultar ahora</a>
-    <button class="btn-outline" style="width:100%; margin-top:10px; color:var(--black); border-color:rgba(0,0,0,0.1);" onclick="document.getElementById('exitPopup').classList.remove('show');">Calcular mi caso antes de irme</button>
+    <button class="btn-secondary" style="width:100%; margin-top:10px; border-color:rgba(10,25,47,0.1);" onclick="document.getElementById('exitPopup').classList.remove('show');">Calcular mi caso antes de irme</button>
     <p class="form-note" style="margin-top:12px;">Primera consulta sin cargo · Respuesta en minutos</p>
   </div>
 </div>
@@ -1545,33 +1601,9 @@
   // ============================================================
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
-    header.style.background = window.scrollY > 60 ? 'rgba(11,12,16,0.99)' : 'rgba(11,12,16,0.96)';
-    header.style.boxShadow = window.scrollY > 60 ? '0 2px 24px rgba(0,0,0,0.3)' : 'none';
+    header.style.background = window.scrollY > 60 ? 'rgba(10, 25, 47, 0.99)' : 'rgba(10, 25, 47, 0.97)';
+    header.style.boxShadow = window.scrollY > 60 ? '0 2px 24px rgba(10,25,47,0.3)' : 'none';
   }, { passive: true });
-
-  // ============================================================
-  // CONTADOR ESTADÍSTICAS
-  // ============================================================
-  let countersAnimated = false;
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !countersAnimated) {
-        countersAnimated = true;
-        if (typeof CountUp !== 'undefined') {
-          document.querySelectorAll('.counter').forEach(el => {
-            const target = parseInt(el.getAttribute('data-target'));
-            if (target > 0) {
-              const counterInstance = new CountUp(el, target, { duration: 2, separator: '.', decimal: ',' });
-              if (!counterInstance.error) counterInstance.start();
-              else el.textContent = target;
-            }
-          });
-        }
-      }
-    });
-  }, { threshold: 0.3 });
-  const statsSection = document.getElementById('resultados');
-  // No hay bloque de estadísticas en este layout, pero lo dejamos por si se agrega.
 
   // ============================================================
   // CALCULADORA DESPIDO
@@ -1627,23 +1659,6 @@
   document.getElementById('sueldoArt')?.addEventListener('input', calcArt);
   document.getElementById('incapacidadArt')?.addEventListener('change', calcArt);
   document.getElementById('edadArt')?.addEventListener('change', calcArt);
-
-  // ============================================================
-  // HERO MINI-FORM
-  // ============================================================
-  function enviarHeroWhatsapp() {
-    const telefono = document.getElementById('heroTelefono').value.trim();
-    if (!telefono) { document.getElementById('heroTelefono').style.borderColor = '#C73B2B'; return; }
-    document.getElementById('heroTelefono').style.borderColor = '';
-    const text = `Hola, soy un posible cliente. Mi teléfono es ${telefono}. Quiero que me ayuden con mi caso laboral.`;
-    const url = `https://wa.me/543534456989?text=${encodeURIComponent(text)}`;
-    gtag('event', 'conversion', {'send_to': 'AW-1749966760/SorCNSK47wcEPz4vphB', 'value': 1.0, 'currency': 'USD'});
-    window.open(url, '_blank');
-  }
-  document.getElementById('heroTelefono')?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') enviarHeroWhatsapp();
-  });
-  document.getElementById('heroTelefono')?.addEventListener('input', function() { this.style.borderColor = ''; });
 
   // ============================================================
   // FORMULARIO PRINCIPAL
@@ -1739,7 +1754,7 @@
   actualizarContadorCasos();
   setInterval(actualizarContadorCasos, 3600000);
 
-  console.log('Barrionuevo Masud & Asoc. - Landing renovada con enfoque ART');
+  console.log('Barrionuevo Masud & Asoc. - Landing renovada con diseño azul formal y fondo optimizado para móvil');
 </script>
 </body>
 </html>
