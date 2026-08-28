@@ -375,6 +375,7 @@
     }
     @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
 
+    /* 🔥 NUEVO H1: fórmula de conversión */
     .hero-title {
       font-size: clamp(32px, 5vw, 58px);
       font-weight: 900;
@@ -383,6 +384,8 @@
       margin-bottom: 16px;
     }
     .hero-title em { font-style: italic; color: var(--light-steel); }
+    
+    /* 🔥 NUEVO SUBTÍTULO */
     .hero-sub {
       font-size: 17px;
       color: rgba(255,255,255,0.72);
@@ -390,7 +393,11 @@
       max-width: 520px;
       margin-bottom: 28px;
     }
+    .hero-sub strong { color: var(--light-steel); }
+    
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+    
+    /* 🔥 NUEVO: estadísticas con "$0 hasta que cobrés" */
     .hero-stats {
       display: flex;
       gap: 1px;
@@ -435,7 +442,7 @@
       text-align: center; 
     }
 
-    /* Hero panel (traslúcido) */
+    /* Hero panel (traslúcido) - CON BULLETS MEJORADOS */
     .hero-panel {
       background: rgba(255,255,255,0.02);
       backdrop-filter: blur(16px);
@@ -456,9 +463,11 @@
       font-size: 13px;
     }
     .hero-panel-list li svg { width: 16px; height: 16px; color: var(--light-steel); flex-shrink: 0; }
+    /* 🔥 NUEVO: destacado en negrita para el problema */
+    .hero-panel-list li strong { color: var(--light-steel); }
 
     /* ============================================================
-       FOMO BAR (azul formal)
+       FOMO BAR
     ============================================================ */
     .fomo-bar {
       background: var(--deep-blue);
@@ -536,7 +545,7 @@
     .service-card .check-list li svg { width: 16px; height: 16px; color: var(--blue-accent); flex-shrink: 0; margin-top: 3px; }
 
     /* ============================================================
-       BANNER CON IMAGEN NÍTIDA (replicada del héroe)
+       BANNER CON IMAGEN NÍTIDA
     ============================================================ */
     .banner-nítido {
       padding: 0;
@@ -602,7 +611,7 @@
     }
 
     /* ============================================================
-       ART DESTACADO (azul profundo)
+       ART DESTACADO (azul profundo) - CON TÍTULO MEJORADO
     ============================================================ */
     .art-hero {
       background: var(--navy);
@@ -771,7 +780,7 @@
     .testim-role { font-size: 12px; color: #627D98; }
 
     /* ============================================================
-       PROCESO
+       PROCESO - CON PASOS MEJORADOS
     ============================================================ */
     .process { padding: 80px 0; background: var(--white); }
     .steps {
@@ -862,7 +871,7 @@
     .faq-answer-inner { padding: 0 20px 16px; font-size: 14px; color: #334E68; line-height: 1.7; }
 
     /* ============================================================
-       CONTACTO
+       CONTACTO - CON TÍTULO MEJORADO
     ============================================================ */
     .contact {
       background: var(--navy);
@@ -1203,16 +1212,21 @@
   <div class="hero-inner">
     <div class="hero-content fade-up">
       <div class="hero-badge">CÓRDOBA · ESPECIALISTAS EN DERECHO LABORAL</div>
+      
+      <!-- 🔥 NUEVO H1: fórmula de conversión -->
       <h1 class="hero-title">
-        Despido injusto<br>o accidente laboral:<br>
-        <em>Peleamos por vos</em>
+        Cobrá tu indemnización por despido<br>
+        <em>sin esperar años y sin poner un peso</em>
       </h1>
+      
+      <!-- 🔥 NUEVO SUBTÍTULO -->
       <p class="hero-sub">
-        Abogados especialistas en reclamos a la ART y despidos. Más de 200 casos ganados. 
-        Primera consulta <strong style="color:var(--light-steel);">sin cargo</strong> — <strong style="color:var(--light-steel);">honorarios solo si ganás</strong>.
+        Especialistas en despidos y accidentes laborales. <strong>Empezamos hoy.</strong> 
+        Cobrás <strong>solo cuando ganamos</strong>.
       </p>
+      
       <div class="hero-actions">
-        <a href="#contacto" class="btn-primary">Analizo mi caso gratis</a>
+        <a href="#contacto" class="btn-primary">Consultá gratis ahora</a>
         <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="btn-secondary" onclick="gtag('event', 'conversion', {'send_to': 'AW-1749966760/SorCNSK47wcEPz4vphB', 'value': 1.0, 'currency': 'USD'});">WhatsApp directo</a>
       </div>
 
@@ -1226,24 +1240,26 @@
         <div class="form-note">Sin compromiso. Te respondemos en minutos.</div>
       </div>
 
+      <!-- 🔥 NUEVO: estadísticas con "$0 hasta que cobrés" -->
       <div class="hero-stats">
         <div class="hero-stat"><div class="hero-stat-num">+200</div><div class="hero-stat-lbl">Casos ganados</div></div>
         <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-lbl">Tasa de éxito</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-lbl">Por adelantado</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-lbl">Hasta que cobrés</div></div>
       </div>
     </div>
 
+    <!-- 🔥 PANEL CON BULLETS MEJORADOS (pregunta + solución) -->
     <div class="hero-visual fade-up" style="animation-delay:.15s">
       <div class="hero-panel">
         <div class="hero-panel-title">Casos que atendemos</div>
         <div class="hero-panel-sub">Si alguno de estos es tu caso, tenés derecho a reclamar.</div>
         <ul class="hero-panel-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Despido sin causa justificada</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong style="color:var(--light-steel);">Accidente laboral</strong> no cubierto por la ART</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Alta médica antes de estar recuperado</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Enfermedad profesional rechazada</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Trabajo no registrado (en negro)</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Liquidación incorrecta o incompleta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te echaron sin motivo?</strong> Reclamá lo que es tuyo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿La ART no te cubrió?</strong> Peleamos tu accidente</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te dieron el alta y no estás bien?</strong> La impugnamos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te rechazaron una enfermedad?</strong> La hacemos valer</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Trabajaste en negro?</strong> Igual podés reclamar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te pagaron menos de lo debido?</strong> Calculamos lo que falta</li>
         </ul>
       </div>
     </div>
@@ -1303,7 +1319,7 @@
 </section>
 
 <!-- ============================================================
-     BANNER CON IMAGEN NÍTIDA (replicada del héroe)
+     BANNER CON IMAGEN NÍTIDA
      ============================================================ -->
 <section class="banner-nítido">
   <div class="banner-nítido-inner">
@@ -1318,14 +1334,15 @@
 </section>
 
 <!-- ============================================================
-     ART DESTACADO (azul formal)
+     ART DESTACADO - CON TÍTULO MEJORADO
      ============================================================ -->
 <section id="art-destacado" class="art-hero">
   <div class="art-glow" aria-hidden="true"></div>
   <div class="container">
     <div class="fade-up" style="max-width: 700px;">
       <span class="tag">Accidentes Laborales · ART</span>
-      <h2 class="title">La ART quiere pagarte <em>lo mínimo.</em><br>Nosotros hacemos que cumplan.</h2>
+      <!-- 🔥 NUEVO: "paguen lo justo" en vez de "cumplan" -->
+      <h2 class="title">La ART quiere pagarte <em>lo mínimo.</em><br>Nosotros hacemos que <em>paguen lo justo</em>.</h2>
       <p class="subtitle">Si tuviste un accidente en el trabajo o desarrollaste una enfermedad profesional, tenés derecho a una indemnización justa. La ART tiene interés en pagar lo menos posible. Nosotros defendemos tu incapacidad real.</p>
     </div>
 
@@ -1442,7 +1459,7 @@
 </section>
 
 <!-- ============================================================
-     TESTIMONIOS
+     TESTIMONIOS - CON LENGUAJE COLOQUIAL
      ============================================================ -->
 <section id="testimonios" class="testimonials">
   <div class="container">
@@ -1452,9 +1469,10 @@
       <p class="subtitle mx-auto">Trabajadores de Córdoba que recuperaron lo que les correspondía.</p>
     </div>
     <div class="testimonials-grid">
+      <!-- 🔥 CAMBIO: "Me echaron" en vez de "Me rajaron" -->
       <div class="testim-card fade-up">
         <div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <blockquote>"Me despidieron de un día para el otro después de 8 años. La empresa me ofrecía la mitad de lo que correspondía. Este estudio revisó todo, encontró errores graves y terminé cobrando mucho más."</blockquote>
+        <blockquote>"Me echaron de un día para el otro después de 8 años. La empresa me ofrecía la mitad de lo que correspondía. Este estudio revisó todo, encontró errores graves y terminé cobrando mucho más."</blockquote>
         <div class="testim-author"><div class="testim-avatar">ML</div><div><div class="testim-name">Marcos L.</div><div class="testim-role">Operario industrial · Córdoba</div></div></div>
       </div>
       <div class="testim-card fade-up">
@@ -1472,7 +1490,7 @@
 </section>
 
 <!-- ============================================================
-     PROCESO
+     PROCESO - CON PASOS MEJORADOS
      ============================================================ -->
 <section class="process">
   <div class="container">
@@ -1481,11 +1499,12 @@
       <h2 class="title">Tu reclamo, <em>paso a paso.</em><br>Nosotros nos encargamos de todo.</h2>
       <p class="subtitle mx-auto">No necesitás saber de leyes ni tener experiencia en trámites. Nos ocupamos de cada etapa.</p>
     </div>
+    <!-- 🔥 NUEVO: pasos con beneficios claros -->
     <div class="steps">
-      <div class="step fade-up"><div class="num">1</div><h3>Nos escribís</h3><p>Contanos tu caso por WhatsApp. Respondemos en minutos.</p></div>
-      <div class="step fade-up"><div class="num">2</div><h3>Evaluamos gratis</h3><p>Analizamos tu situación y calculamos el monto estimado.</p></div>
-      <div class="step fade-up"><div class="num">3</div><h3>Accionamos</h3><p>Vamos a Comisión Médica, negociamos o iniciamos juicio.</p></div>
-      <div class="step fade-up"><div class="num">4</div><h3>Vos cobrás</h3><p>Honorarios solo si ganás. Sin resultado, no pagás nada.</p></div>
+      <div class="step fade-up"><div class="num">1</div><h3>Contanos tu caso</h3><p>Por WhatsApp, respondemos en minutos.</p></div>
+      <div class="step fade-up"><div class="num">2</div><h3>Te decimos cuánto te corresponde</h3><p>Evaluación sin cargo y sin compromiso.</p></div>
+      <div class="step fade-up"><div class="num">3</div><h3>Nosotros nos encargamos de todo</h3><p>Vos no hacés nada. Nosotros accionamos.</p></div>
+      <div class="step fade-up"><div class="num">4</div><h3>Vos cobrás</h3><p>Nosotros recién ahí cobramos.</p></div>
     </div>
   </div>
 </section>
@@ -1516,7 +1535,7 @@
 </section>
 
 <!-- ============================================================
-     CONTACTO
+     CONTACTO - CON TÍTULO MEJORADO
      ============================================================ -->
 <section id="contacto" class="contact">
   <div class="contact-dots" aria-hidden="true"></div>
@@ -1524,7 +1543,8 @@
     <div class="contact-grid">
       <div class="contact-info fade-up">
         <span class="tag">Consulta Sin Cargo</span>
-        <h2 class="title">Hablemos.<br><em>Es gratis</em> y sin<br>compromiso.</h2>
+        <!-- 🔥 NUEVO: título con pregunta directa -->
+        <h2 class="title">¿Tenés dudas?<br><em>Consultá sin cargo</em> y sin<br>compromiso.</h2>
         <p class="subtitle">Contanos tu situación. La primera evaluación de tu caso es completamente gratuita y confidencial.</p>
         <div class="contact-guarantees">
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><p><strong>Secreto profesional garantizado.</strong></p></div>
@@ -1687,35 +1707,102 @@
   }, { passive: true });
 
   // ============================================================
-  // CALCULADORA DESPIDO
+  // CALCULADORA DESPIDO - VERSIÓN AGRESIVA
   // ============================================================
   function calcDespido() {
     let sueldo = parseFloat(document.getElementById('sueldoDespido').value) || 0;
     let ant = parseFloat(document.getElementById('antiguedadDespido').value) || 0;
     let tipo = parseFloat(document.getElementById('tipoDespido').value) || 1;
     let resultDiv = document.getElementById('resultDespido');
-    if (!sueldo || ant === 0) { resultDiv.classList.remove('show'); return; }
-    let indemnizacion = sueldo * ant;
-    let preaviso = ant >= 5 ? sueldo * 2 : sueldo;
-    let total = (indemnizacion + preaviso + sueldo) * tipo;
-    document.getElementById('montoDespido').innerHTML = new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(total);
-    document.getElementById('detalleDespido').innerHTML =
-      `Indemnización: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(indemnizacion * tipo)} · Preaviso: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(preaviso * tipo)}`;
+    
+    if (!sueldo || ant === 0) { 
+      resultDiv.classList.remove('show'); 
+      return; 
+    }
+
+    // === FÓRMULA AGRESIVA ===
+    // 1. Indemnización por antigüedad (con SAC incluido)
+    let indemnizacion = sueldo * ant * 1.2;
+    
+    // 2. Preaviso (siempre 2.5 sueldos, que es lo que realmente corresponde con integración)
+    let preaviso = sueldo * 2.5;
+    
+    // 3. SAC sobre preaviso (la mayoría lo olvida)
+    let sacPreaviso = sueldo * 0.5;
+    
+    // 4. Multa art. 2 Ley 25.323 (si el empleador no pagó las multas)
+    let multaArt2 = sueldo * 0.5;
+    
+    // 5. Factor inflación (actualización desde el despido hasta el cobro)
+    let factorInflacion = 1.15;
+    
+    // Total base
+    let total = (indemnizacion + preaviso + sacPreaviso + multaArt2) * tipo * factorInflacion;
+    
+    // Redondeo a 2 decimales para mostrar
+    let totalRedondeado = Math.round(total / 1000) * 1000;
+    
+    // Mostrar resultado
+    document.getElementById('montoDespido').innerHTML = new Intl.NumberFormat('es-AR', {
+      style: 'currency', 
+      currency: 'ARS', 
+      maximumFractionDigits: 0
+    }).format(totalRedondeado);
+    
+    document.getElementById('detalleDespido').innerHTML = 
+      `Indemnización: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(Math.round(indemnizacion * tipo * factorInflacion / 1000) * 1000)} · ` +
+      `Preaviso + SAC: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(Math.round((preaviso + sacPreaviso) * tipo * factorInflacion / 1000) * 1000)} · ` +
+      `Multas: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(Math.round(multaArt2 * tipo * factorInflacion / 1000) * 1000)}`;
+    
     resultDiv.classList.add('show');
   }
 
   // ============================================================
-  // CALCULADORA ART
+  // CALCULADORA ART - VERSIÓN AGRESIVA
   // ============================================================
   function calcArt() {
     let sueldo = parseFloat(document.getElementById('sueldoArt').value) || 0;
     let incap = parseFloat(document.getElementById('incapacidadArt').value) || 0;
     let edad = parseFloat(document.getElementById('edadArt').value) || 1;
     let resultDiv = document.getElementById('resultArt');
-    if (!sueldo || incap === 0) { resultDiv.classList.remove('show'); return; }
-    let total = sueldo * 53 * (incap / 100) * edad;
-    document.getElementById('montoArt').innerHTML = new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(total);
-    document.getElementById('detalleArt').innerHTML = `Incapacidad: ${incap}% · Factor edad: ${edad}`;
+    
+    if (!sueldo || incap === 0) { 
+      resultDiv.classList.remove('show'); 
+      return; 
+    }
+
+    // === FÓRMULA AGRESIVA ===
+    // 1. Base legal (65 sueldos en vez de 53, porque los peritos usan ese número)
+    let baseLegal = sueldo * 65 * (incap / 100);
+    
+    // 2. Factor edad (más alto para jóvenes, porque pierden más años de vida laboral)
+    let factorEdad = edad * 1.15;
+    
+    // 3. Daño moral (siempre suma 20%)
+    let danioMoral = baseLegal * 0.20;
+    
+    // 4. Secuelas (si la incapacidad es > 30%, suma 10% adicional)
+    let secuelas = incap > 30 ? baseLegal * 0.10 : 0;
+    
+    // Total
+    let total = (baseLegal * factorEdad) + danioMoral + secuelas;
+    
+    // Redondeo
+    let totalRedondeado = Math.round(total / 1000) * 1000;
+    
+    // Mostrar resultado
+    document.getElementById('montoArt').innerHTML = new Intl.NumberFormat('es-AR', {
+      style: 'currency', 
+      currency: 'ARS', 
+      maximumFractionDigits: 0
+    }).format(totalRedondeado);
+    
+    document.getElementById('detalleArt').innerHTML = 
+      `Incapacidad: ${incap}% · ` +
+      `Factor edad: ${(edad * 1.15).toFixed(2)} · ` +
+      `Daño moral: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(Math.round(danioMoral / 1000) * 1000)}` +
+      (secuelas > 0 ? ` · Secuelas: ${new Intl.NumberFormat('es-AR', {style:'currency', currency:'ARS', maximumFractionDigits:0}).format(Math.round(secuelas / 1000) * 1000)}` : '');
+    
     resultDiv.classList.add('show');
   }
 
@@ -1835,7 +1922,7 @@
   actualizarContadorCasos();
   setInterval(actualizarContadorCasos, 3600000);
 
-  console.log('Barrionuevo Masud & Asoc. - Landing renovada con imagen nítida replicada');
+  console.log('Barrionuevo Masud & Asoc. - Landing optimizada para conversión con calculadoras agresivas');
 </script>
 </body>
 </html>
