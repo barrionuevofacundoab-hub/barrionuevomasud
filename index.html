@@ -114,6 +114,11 @@
     }
 
     /* ============================================================
+       CAMBIO 4: keyframes spin para el spinner del botón submit
+    ============================================================ */
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ============================================================
        TIPOGRAFÍA
     ============================================================ */
     .tag {
@@ -1657,7 +1662,7 @@
 </div>
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/countup.js@2.7.0/dist/countUp.umd.min.js"></script>
+<!-- CAMBIO 4: eliminado <script src="https://cdn.jsdelivr.net/npm/countup.js@2.7.0/dist/countUp.umd.min.js"></script> porque no se usa -->
 <script>
   // ============================================================
   // MENÚ HAMBURGUESA
@@ -1828,7 +1833,9 @@
   const telefono = document.getElementById('telefono');
   const mensaje = document.getElementById('mensaje');
   const submitBtn = document.getElementById('submitBtn');
-  const telefonoRegex = /^(?:[0-9]{10}|[0-9]{11})$/;
+
+  // CAMBIO 4: regex actualizada a 10-13 dígitos (después de limpiar +, espacios, guiones, paréntesis)
+  const telefonoRegex = /^\d{10,13}$/;
 
   function validarCampo(input, errorId, testFn) {
     const error = document.getElementById(errorId);
@@ -1843,7 +1850,10 @@
     }
   }
   function validarNombre(val) { return val.length >= 2; }
-  function validarTelefono(val) { return telefonoRegex.test(val.replace(/[\s\-\(\)]/g, '')); }
+  // CAMBIO 4: limpiar espacios, guiones, paréntesis y + antes de validar
+  function validarTelefono(val) {
+    return telefonoRegex.test(val.replace(/[\s\-\(\)\+]/g, ''));
+  }
   function validarMensaje(val) { return val === '' || val.length >= 10; }
 
   nombre.addEventListener('blur', () => validarCampo(nombre, 'nombreError', validarNombre));
@@ -1876,12 +1886,17 @@
       setTimeout(() => { form._convEnviada = false; }, 1000);
     }
 
-    // CAMBIO 4: mensaje formateado con saltos de línea %0A
-    const textBase = `Hola, soy ${nombre.value.trim()}.\nMi teléfono es ${telefono.value.trim()}.\n${mensaje.value.trim() ? 'Consulta: ' + mensaje.value.trim() : 'Quiero consultar mi caso laboral.'}`;
+    // CAMBIO 4: tercera línea siempre "Consulta: ..." (aunque el mensaje esté vacío)
+    const descripcion = mensaje.value.trim() || 'quiero consultar mi caso laboral';
+    const textBase = `Hola, soy ${nombre.value.trim()}.\nMi teléfono es ${telefono.value.trim()}.\nConsulta: ${descripcion}`;
     const textFinal = textBase + obtenerSufijoGA();
     const url = `https://wa.me/543534456989?text=${encodeURIComponent(textFinal)}`;
+
+    // CAMBIO 1: window.open inmediato (sin setTimeout), para que Safari iPhone no lo bloquee
+    window.open(url, '_blank');
+
+    // CAMBIO 1: setTimeout SOLO para restaurar el botón
     setTimeout(() => {
-      window.open(url, '_blank');
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar por WhatsApp';
     }, 800);
@@ -1900,13 +1915,18 @@
   document.addEventListener('mouseleave', function(e) {
     if (e.clientY <= 0 && !exitPopupShown) mostrarExitPopup();
   });
+
+  // CAMBIO 3: en celular, el popup solo aparece tras 30s en la página + subir scroll 50px
   let lastScrollY = window.scrollY;
+  const tiempoInicio = Date.now();
   window.addEventListener('scroll', function() {
     if (window.innerWidth <= 768) {
-      if (window.scrollY < lastScrollY - 50 && !exitPopupShown) mostrarExitPopup();
+      const tiempoEnPagina = Date.now() - tiempoInicio;
+      if (tiempoEnPagina >= 30000 && window.scrollY < lastScrollY - 50 && !exitPopupShown) mostrarExitPopup();
       lastScrollY = window.scrollY;
     }
   }, { passive: true });
+
   exitPopupClose.addEventListener('click', function() { exitPopup.classList.remove('show'); });
   exitPopup.addEventListener('click', function(e) { if (e.target === exitPopup) exitPopup.classList.remove('show'); });
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') exitPopup.classList.remove('show'); });
@@ -2063,11 +2083,8 @@
 (function(){
   'use strict';
 
-  var SECCIONES = {
-    'despidos': 'Hola, me despidieron y quiero consultar mi caso',
-    'servicios': 'Hola, me despidieron y quiero consultar mi caso',
-    'art-destacado': 'Hola, tuve un accidente laboral o problema con la ART y quiero consultar mi caso'
-  };
+  var MENSAJE_DESPIDOS = 'Hola, me despidieron y quiero consultar mi caso';
+  var MENSAJE_ART = 'Hola, tuve un accidente laboral o problema con la ART y quiero consultar mi caso';
   var MENSAJE_GENERAL = 'Hola, quiero consultar mi caso laboral';
   var mensajeActual = MENSAJE_GENERAL;
 
@@ -2088,28 +2105,29 @@
 
   if (!('IntersectionObserver' in window)) return;
 
-  var idsObservar = ['servicios', 'despidos', 'art-destacado'];
-  var visibilidad = {};
+  var idsObservar = ['despidos', 'art-destacado'];
+  var visibilidad = { 'despidos': false, 'art-destacado': false };
 
   idsObservar.forEach(function(id) {
     var el = document.getElementById(id);
     if (!el) return;
+    // CAMBIO 2: threshold 0 y rootMargin -45%/-45% (detecta la sección que cruza el centro del viewport)
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         visibilidad[entry.target.id] = entry.isIntersecting;
       });
       recalcularMensaje();
-    }, { threshold: 0.3, rootMargin: '-80px 0px -80px 0px' });
+    }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
     obs.observe(el);
-    visibilidad[id] = false;
   });
 
   function recalcularMensaje() {
     var nuevoMensaje;
-    if (visibilidad['despidos'] || visibilidad['servicios']) {
-      nuevoMensaje = SECCIONES['despidos'];
+    // CAMBIO 2: solo 'despidos' activa el mensaje de despidos (ya no 'servicios')
+    if (visibilidad['despidos']) {
+      nuevoMensaje = MENSAJE_DESPIDOS;
     } else if (visibilidad['art-destacado']) {
-      nuevoMensaje = SECCIONES['art-destacado'];
+      nuevoMensaje = MENSAJE_ART;
     } else {
       nuevoMensaje = MENSAJE_GENERAL;
     }
