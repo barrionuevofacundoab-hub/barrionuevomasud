@@ -97,6 +97,23 @@
     .container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
 
     /* ============================================================
+       CAMBIO 1: scroll-margin-top para anclas (menú fijo 74px escritorio / 64px mobile / 60px mobile chico)
+    ============================================================ */
+    #inicio, #servicios, #despidos, #art-destacado, #testimonios, #faq, #contacto {
+      scroll-margin-top: 80px;
+    }
+    @media (max-width: 768px) {
+      #inicio, #servicios, #despidos, #art-destacado, #testimonios, #faq, #contacto {
+        scroll-margin-top: 70px;
+      }
+    }
+    @media (max-width: 480px) {
+      #inicio, #servicios, #despidos, #art-destacado, #testimonios, #faq, #contacto {
+        scroll-margin-top: 66px;
+      }
+    }
+
+    /* ============================================================
        TIPOGRAFÍA
     ============================================================ */
     .tag {
@@ -1231,7 +1248,8 @@
       <!-- Hero mini-form - BOTÓN PERSUASIVO -->
       <div class="hero-mini-form">
         <div class="form-row">
-          <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20reclamar%20mi%20indemnizaci%C3%B3n%20laboral" target="_blank" rel="noopener" class="btn-primary" data-ubicacion="hero_form">
+          <!-- CAMBIO 2: mensaje general en hero -->
+          <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="btn-primary" data-ubicacion="hero_form">
             ⚖️ Reclamar mi indemnización ahora
           </a>
         </div>
@@ -1290,7 +1308,8 @@
       <p class="subtitle mx-auto">Nos especializamos exclusivamente en Derecho Laboral. Esta concentración nos permite ofrecer una defensa técnica superior en cada caso.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card fade-up">
+      <!-- CAMBIO 1: agregado id="despidos" a la tarjeta de Despidos -->
+      <div class="service-card fade-up" id="despidos">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
         <h3>Despidos y Reclamos Laborales</h3>
         <p>Si fuiste despedido injustamente o tu liquidación fue incorrecta, tenés derecho a reclamar. Analizamos tu situación y te decimos exactamente cuánto te corresponde.</p>
@@ -1356,7 +1375,8 @@
 
     <div class="art-actions fade-up" style="display:flex; gap:14px; flex-wrap:wrap;">
       <a href="#contacto" class="btn-primary">Iniciar reclamo a la ART</a>
-      <a href="https://wa.me/543534456989?text=Quiero%20consultar%20mi%20caso%20contra%20la%20ART" target="_blank" class="btn-outline" data-ubicacion="art">Escribir por WhatsApp</a>
+      <!-- CAMBIO 2: mensaje ART -->
+      <a href="https://wa.me/543534456989?text=Hola%2C%20tuve%20un%20accidente%20laboral%20o%20problema%20con%20la%20ART%20y%20quiero%20consultar%20mi%20caso" target="_blank" class="btn-outline" data-ubicacion="art">Escribir por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1411,7 +1431,8 @@
           <div class="result-detail" id="detalleDespido"></div>
           <div class="result-note">*No incluye SAC ni vacaciones. Consultá para cálculo exacto.</div>
         </div>
-        <a href="https://wa.me/543534456989?text=Quiero%20c%C3%A1lculo%20exacto%20de%20mi%20despido" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_despido">Solicitar cálculo exacto</a>
+        <!-- CAMBIO 2: mensaje despidos en calculadora de despido -->
+        <a href="https://wa.me/543534456989?text=Hola%2C%20me%20despidieron%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_despido">Solicitar cálculo exacto</a>
       </div>
     </div>
 
@@ -1449,7 +1470,8 @@
           <div class="result-detail" id="detalleArt"></div>
           <div class="result-note">*Cálculo estimado según Ley 24.557. Consultá para evaluación precisa.</div>
         </div>
-        <a href="https://wa.me/543534456989?text=Quiero%20revisar%20mi%20caso%20ART" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_art">Revisar mi caso con ART</a>
+        <!-- CAMBIO 2: mensaje ART en calculadora ART -->
+        <a href="https://wa.me/543534456989?text=Hola%2C%20tuve%20un%20accidente%20laboral%20o%20problema%20con%20la%20ART%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_art">Revisar mi caso con ART</a>
       </div>
     </div>
   </div>
@@ -1515,6 +1537,7 @@
         <h2 class="title" style="font-size:30px;">Preguntas<br>Frecuentes</h2>
         <p class="subtitle">Las dudas más comunes de los trabajadores de Córdoba antes de consultar.</p>
         <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
+          <!-- CAMBIO 5: data-ubicacion de contacto en WhatsApp del FAQ (mensaje general) -->
           <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Teléfono</strong><p style="font-size:14px; font-weight:600;"><a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="contacto" style="color:var(--navy);">WhatsApp: (353) 4456-989</a></p></div></div>
           <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong><p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p></div></div>
         </div>
@@ -1546,6 +1569,7 @@
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p><strong>Respuesta rápida.</strong> Respondemos en minutos.</p></div>
         </div>
         <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
+          <!-- CAMBIO 2: mensaje general -->
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="contacto" style="color:rgba(255,255,255,0.5);">WhatsApp: (353) 4456-989</a></div>
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Córdoba Capital y toda la provincia</div>
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tucumán 41, Oficina 43, Córdoba</div>
@@ -1625,6 +1649,7 @@
     <div class="popup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
     <h3>No te vayas, es gratis y toma 2 minutos</h3>
     <p>Descubrí en minutos si tenés derecho a indemnización. Sin compromiso ni costo.</p>
+    <!-- CAMBIO 2: mensaje general en popup -->
     <a href="https://wa.me/543534456989?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" class="btn-primary" data-ubicacion="popup_salida" onclick="document.getElementById('exitPopup').classList.remove('show');">Consultar ahora</a>
     <button class="btn-secondary" style="width:100%; margin-top:10px; border-color:rgba(10,25,47,0.1);" onclick="document.getElementById('exitPopup').classList.remove('show');">Calcular mi caso antes de irme</button>
     <p class="form-note" style="margin-top:12px;">Primera consulta sin cargo · Respuesta en minutos</p>
@@ -1851,7 +1876,8 @@
       setTimeout(() => { form._convEnviada = false; }, 1000);
     }
 
-    const textBase = `Hola, soy ${nombre.value.trim()}. Mi teléfono es ${telefono.value.trim()}.${mensaje.value.trim() ? ' Consulta: ' + mensaje.value.trim() : ''}`;
+    // CAMBIO 4: mensaje formateado con saltos de línea %0A
+    const textBase = `Hola, soy ${nombre.value.trim()}.\nMi teléfono es ${telefono.value.trim()}.\n${mensaje.value.trim() ? 'Consulta: ' + mensaje.value.trim() : 'Quiero consultar mi caso laboral.'}`;
     const textFinal = textBase + obtenerSufijoGA();
     const url = `https://wa.me/543534456989?text=${encodeURIComponent(textFinal)}`;
     setTimeout(() => {
@@ -2029,6 +2055,75 @@
     moLinks.observe(document.body, { childList: true, subtree: true });
   }
 })();
+
+/* ============================================================
+   CAMBIO 3: IntersectionObserver para botón flotante y pop-up
+   Cambia el mensaje de WhatsApp según la sección visible
+   ============================================================ */
+(function(){
+  'use strict';
+
+  var SECCIONES = {
+    'despidos': 'Hola, me despidieron y quiero consultar mi caso',
+    'servicios': 'Hola, me despidieron y quiero consultar mi caso',
+    'art-destacado': 'Hola, tuve un accidente laboral o problema con la ART y quiero consultar mi caso'
+  };
+  var MENSAJE_GENERAL = 'Hola, quiero consultar mi caso laboral';
+  var mensajeActual = MENSAJE_GENERAL;
+
+  function actualizarEnlacesWhatsApp(mensaje) {
+    var textoCodificado = encodeURIComponent(mensaje);
+    var enlaces = document.querySelectorAll('.wa-float, #exitPopup a[href^="https://wa.me/"]');
+    enlaces.forEach(function(a) {
+      var base = 'https://wa.me/543534456989?text=';
+      // Preservar posible sufijo GA si existe
+      var sufijoGA = '';
+      var hrefActual = a.getAttribute('href');
+      if (hrefActual && hrefActual.indexOf('%20(Ref%3A%20GA)') !== -1) {
+        sufijoGA = '%20(Ref%3A%20GA)';
+      }
+      a.setAttribute('href', base + textoCodificado + sufijoGA);
+    });
+  }
+
+  if (!('IntersectionObserver' in window)) return;
+
+  var idsObservar = ['servicios', 'despidos', 'art-destacado'];
+  var visibilidad = {};
+
+  idsObservar.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        visibilidad[entry.target.id] = entry.isIntersecting;
+      });
+      recalcularMensaje();
+    }, { threshold: 0.3, rootMargin: '-80px 0px -80px 0px' });
+    obs.observe(el);
+    visibilidad[id] = false;
+  });
+
+  function recalcularMensaje() {
+    var nuevoMensaje;
+    if (visibilidad['despidos'] || visibilidad['servicios']) {
+      nuevoMensaje = SECCIONES['despidos'];
+    } else if (visibilidad['art-destacado']) {
+      nuevoMensaje = SECCIONES['art-destacado'];
+    } else {
+      nuevoMensaje = MENSAJE_GENERAL;
+    }
+    if (nuevoMensaje !== mensajeActual) {
+      mensajeActual = nuevoMensaje;
+      actualizarEnlacesWhatsApp(mensajeActual);
+    }
+  }
+
+  // Inicializar con mensaje general
+  actualizarEnlacesWhatsApp(MENSAJE_GENERAL);
+})();
 </script>
+
+<!-- Anclas disponibles: #inicio, #servicios, #despidos, #art-destacado, #testimonios, #faq, #contacto -->
 </body>
 </html>
