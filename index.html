@@ -97,7 +97,7 @@
     .container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
 
     /* ============================================================
-       CAMBIO 1: scroll-margin-top para anclas (menú fijo 74px escritorio / 64px mobile / 60px mobile chico)
+       scroll-margin-top para anclas (menú fijo)
     ============================================================ */
     #inicio, #servicios, #despidos, #art-destacado, #testimonios, #faq, #contacto {
       scroll-margin-top: 80px;
@@ -113,9 +113,7 @@
       }
     }
 
-    /* ============================================================
-       CAMBIO 4: keyframes spin para el spinner del botón submit
-    ============================================================ */
+    /* keyframes spin para el spinner del botón submit */
     @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ============================================================
@@ -396,7 +394,7 @@
     }
     @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(0.7)} }
 
-    /* 🔥 H1: con "sin gastar tu dinero" */
+    /* H1: con "sin gastar tu dinero" */
     .hero-title {
       font-size: clamp(32px, 5vw, 58px);
       font-weight: 900;
@@ -406,7 +404,7 @@
     }
     .hero-title em { font-style: italic; color: var(--light-steel); }
     
-    /* 🔥 SUBTÍTULO: corregido */
+    /* SUBTÍTULO: corregido */
     .hero-sub {
       font-size: 17px;
       color: rgba(255,255,255,0.72);
@@ -418,7 +416,7 @@
     
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
     
-    /* 🔥 ESTADÍSTICA: "$0 Honorarios hasta que cobrés" */
+    /* ESTADÍSTICA: "$0 Honorarios hasta que cobrés" */
     .hero-stats {
       display: flex;
       gap: 1px;
@@ -631,7 +629,7 @@
     }
 
     /* ============================================================
-       ART DESTACADO (azul profundo) - CON TÍTULO MEJORADO
+       ART DESTACADO (azul profundo)
     ============================================================ */
     .art-hero {
       background: var(--navy);
@@ -800,7 +798,7 @@
     .testim-role { font-size: 12px; color: #627D98; }
 
     /* ============================================================
-       PROCESO - CON PASOS MEJORADOS
+       PROCESO
     ============================================================ */
     .process { padding: 80px 0; background: var(--white); }
     .steps {
@@ -891,7 +889,7 @@
     .faq-answer-inner { padding: 0 20px 16px; font-size: 14px; color: #334E68; line-height: 1.7; }
 
     /* ============================================================
-       CONTACTO - CON TÍTULO MEJORADO
+       CONTACTO
     ============================================================ */
     .contact {
       background: var(--navy);
@@ -1037,58 +1035,6 @@
     }
 
     /* ============================================================
-       EXIT POPUP
-    ============================================================ */
-    .exit-popup {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: 9999;
-      background: rgba(10, 25, 47, 0.75);
-      backdrop-filter: blur(6px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .exit-popup.show { display: flex; }
-    .exit-popup-inner {
-      background: var(--white);
-      border-radius: var(--radius-xl);
-      max-width: 440px;
-      width: 100%;
-      padding: 36px 28px;
-      text-align: center;
-      box-shadow: var(--shadow-hover);
-      position: relative;
-    }
-    .exit-popup-close {
-      position: absolute;
-      top: 14px;
-      right: 18px;
-      background: none;
-      border: none;
-      font-size: 28px;
-      cursor: pointer;
-      color: #627D98;
-      transition: var(--transition);
-      line-height: 1;
-    }
-    .exit-popup-close:hover { color: var(--navy); }
-    .exit-popup-inner .popup-icon {
-      width: 60px; height: 60px;
-      background: rgba(30, 74, 122, 0.04);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-    }
-    .exit-popup-inner .popup-icon svg { width: 28px; height: 28px; color: var(--blue-accent); }
-    .exit-popup-inner h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-    .exit-popup-inner p { font-size: 14px; color: #334E68; margin-bottom: 20px; }
-    .exit-popup-inner .btn-primary { width: 100%; justify-content: center; }
-
-    /* ============================================================
        RESPONSIVE
     ============================================================ */
     @media (max-width: 1024px) {
@@ -1133,7 +1079,6 @@
 
       .calc-tabs { flex-direction: column; border-radius: var(--radius); }
       .calc-tab { border-radius: var(--radius); }
-      .exit-popup-inner { padding: 28px 20px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
 
@@ -1233,13 +1178,11 @@
     <div class="hero-content fade-up">
       <div class="hero-badge">CÓRDOBA · ESPECIALISTAS EN DERECHO LABORAL</div>
       
-      <!-- 🔥 H1 CORREGIDO: "sin gastar tu dinero" -->
       <h1 class="hero-title">
         Cobrá tu indemnización por despido o accidente laboral<br>
         <em>sin esperar años y sin gastar tu dinero</em>
       </h1>
       
-      <!-- 🔥 SUBTÍTULO CORREGIDO -->
       <p class="hero-sub">
         Especialistas en despidos y accidentes laborales. <strong>Empezamos hoy.</strong> 
         Vos cobrás tu indemnización. Nosotros <strong>cobramos honorarios solo si ganamos</strong>.
@@ -1250,10 +1193,8 @@
         <a href="https://wa.me/543534241527?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="btn-secondary" data-ubicacion="hero">WhatsApp directo</a>
       </div>
 
-      <!-- Hero mini-form - BOTÓN PERSUASIVO -->
       <div class="hero-mini-form">
         <div class="form-row">
-          <!-- CAMBIO 2: mensaje general en hero -->
           <a href="https://wa.me/543534241527?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="btn-primary" data-ubicacion="hero_form">
             ⚖️ Reclamar mi indemnización ahora
           </a>
@@ -1261,7 +1202,6 @@
         <div class="form-note">Sin compromiso. Te respondemos en minutos.</div>
       </div>
 
-      <!-- 🔥 ESTADÍSTICA CORREGIDA -->
       <div class="hero-stats">
         <div class="hero-stat"><div class="hero-stat-num">+200</div><div class="hero-stat-lbl">Casos ganados</div></div>
         <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-lbl">Tasa de éxito</div></div>
@@ -1269,7 +1209,6 @@
       </div>
     </div>
 
-    <!-- 🔥 PANEL CON BULLETS MEJORADOS (pregunta + solución) -->
     <div class="hero-visual fade-up" style="animation-delay:.15s">
       <div class="hero-panel">
         <div class="hero-panel-title">Casos que atendemos</div>
@@ -1313,7 +1252,6 @@
       <p class="subtitle mx-auto">Nos especializamos exclusivamente en Derecho Laboral. Esta concentración nos permite ofrecer una defensa técnica superior en cada caso.</p>
     </div>
     <div class="services-grid">
-      <!-- CAMBIO 1: agregado id="despidos" a la tarjeta de Despidos -->
       <div class="service-card fade-up" id="despidos">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
         <h3>Despidos y Reclamos Laborales</h3>
@@ -1356,7 +1294,7 @@
 </section>
 
 <!-- ============================================================
-     ART DESTACADO - CON TÍTULO MEJORADO
+     ART DESTACADO
      ============================================================ -->
 <section id="art-destacado" class="art-hero">
   <div class="art-glow" aria-hidden="true"></div>
@@ -1380,7 +1318,6 @@
 
     <div class="art-actions fade-up" style="display:flex; gap:14px; flex-wrap:wrap;">
       <a href="#contacto" class="btn-primary">Iniciar reclamo a la ART</a>
-      <!-- CAMBIO 2: mensaje ART -->
       <a href="https://wa.me/543534241527?text=Hola%2C%20tuve%20un%20accidente%20laboral%20o%20problema%20con%20la%20ART%20y%20quiero%20consultar%20mi%20caso" target="_blank" class="btn-outline" data-ubicacion="art">Escribir por WhatsApp</a>
     </div>
   </div>
@@ -1436,7 +1373,6 @@
           <div class="result-detail" id="detalleDespido"></div>
           <div class="result-note">*No incluye SAC ni vacaciones. Consultá para cálculo exacto.</div>
         </div>
-        <!-- CAMBIO 2: mensaje despidos en calculadora de despido -->
         <a href="https://wa.me/543534241527?text=Hola%2C%20me%20despidieron%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_despido">Solicitar cálculo exacto</a>
       </div>
     </div>
@@ -1475,7 +1411,6 @@
           <div class="result-detail" id="detalleArt"></div>
           <div class="result-note">*Cálculo estimado según Ley 24.557. Consultá para evaluación precisa.</div>
         </div>
-        <!-- CAMBIO 2: mensaje ART en calculadora ART -->
         <a href="https://wa.me/543534241527?text=Hola%2C%20tuve%20un%20accidente%20laboral%20o%20problema%20con%20la%20ART%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_art">Revisar mi caso con ART</a>
       </div>
     </div>
@@ -1483,7 +1418,7 @@
 </section>
 
 <!-- ============================================================
-     TESTIMONIOS - CON LENGUAJE COLOQUIAL
+     TESTIMONIOS
      ============================================================ -->
 <section id="testimonios" class="testimonials">
   <div class="container">
@@ -1513,7 +1448,7 @@
 </section>
 
 <!-- ============================================================
-     PROCESO - CON PASOS MEJORADOS
+     PROCESO
      ============================================================ -->
 <section class="process">
   <div class="container">
@@ -1542,7 +1477,6 @@
         <h2 class="title" style="font-size:30px;">Preguntas<br>Frecuentes</h2>
         <p class="subtitle">Las dudas más comunes de los trabajadores de Córdoba antes de consultar.</p>
         <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
-          <!-- CAMBIO 5: data-ubicacion de contacto en WhatsApp del FAQ (mensaje general) -->
           <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Teléfono</strong><p style="font-size:14px; font-weight:600;"><a href="https://wa.me/543534241527?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="contacto" style="color:var(--navy);">WhatsApp: (353) 4241-527</a></p></div></div>
           <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue-accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong><p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p></div></div>
         </div>
@@ -1558,7 +1492,7 @@
 </section>
 
 <!-- ============================================================
-     CONTACTO - CON TÍTULO MEJORADO
+     CONTACTO
      ============================================================ -->
 <section id="contacto" class="contact">
   <div class="contact-dots" aria-hidden="true"></div>
@@ -1574,7 +1508,6 @@
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p><strong>Respuesta rápida.</strong> Respondemos en minutos.</p></div>
         </div>
         <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-          <!-- CAMBIO 2: mensaje general -->
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="https://wa.me/543534241527?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="contacto" style="color:rgba(255,255,255,0.5);">WhatsApp: (353) 4241-527</a></div>
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Córdoba Capital y toda la provincia</div>
           <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.5); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--light-steel)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tucumán 41, Oficina 43, Córdoba</div>
@@ -1645,24 +1578,7 @@
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.504 3.935 1.389 5.609L.021 23.4l5.936-1.346A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.367l-.357-.212-3.523.799.843-3.424-.232-.371A9.818 9.818 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
 </a>
 
-<!-- ============================================================
-     EXIT POPUP
-     ============================================================ -->
-<div class="exit-popup" id="exitPopup" role="dialog" aria-modal="true">
-  <div class="exit-popup-inner">
-    <button class="exit-popup-close" id="exitPopupClose" aria-label="Cerrar">×</button>
-    <div class="popup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-    <h3>No te vayas, es gratis y toma 2 minutos</h3>
-    <p>Descubrí en minutos si tenés derecho a indemnización. Sin compromiso ni costo.</p>
-    <!-- CAMBIO 2: mensaje general en popup -->
-    <a href="https://wa.me/543534241527?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" class="btn-primary" data-ubicacion="popup_salida" onclick="document.getElementById('exitPopup').classList.remove('show');">Consultar ahora</a>
-    <button class="btn-secondary" style="width:100%; margin-top:10px; border-color:rgba(10,25,47,0.1);" onclick="document.getElementById('exitPopup').classList.remove('show');">Calcular mi caso antes de irme</button>
-    <p class="form-note" style="margin-top:12px;">Primera consulta sin cargo · Respuesta en minutos</p>
-  </div>
-</div>
-
 <!-- Scripts -->
-<!-- CAMBIO 4: eliminado <script src="https://cdn.jsdelivr.net/npm/countup.js@2.7.0/dist/countUp.umd.min.js"></script> porque no se usa -->
 <script>
   // ============================================================
   // MENÚ HAMBURGUESA
@@ -1731,7 +1647,7 @@
   }, { passive: true });
 
   // ============================================================
-  // CALCULADORA DESPIDO - VERSIÓN AGRESIVA
+  // CALCULADORA DESPIDO
   // ============================================================
   function calcDespido() {
     let sueldo = parseFloat(document.getElementById('sueldoDespido').value) || 0;
@@ -1744,7 +1660,6 @@
       return; 
     }
 
-    // === FÓRMULA AGRESIVA ===
     let indemnizacion = sueldo * ant * 1.2;
     let preaviso = sueldo * 2.5;
     let sacPreaviso = sueldo * 0.5;
@@ -1768,7 +1683,7 @@
   }
 
   // ============================================================
-  // CALCULADORA ART - VERSIÓN AGRESIVA
+  // CALCULADORA ART
   // ============================================================
   function calcArt() {
     let sueldo = parseFloat(document.getElementById('sueldoArt').value) || 0;
@@ -1834,7 +1749,6 @@
   const mensaje = document.getElementById('mensaje');
   const submitBtn = document.getElementById('submitBtn');
 
-  // CAMBIO 4: regex actualizada a 10-13 dígitos (después de limpiar +, espacios, guiones, paréntesis)
   const telefonoRegex = /^\d{10,13}$/;
 
   function validarCampo(input, errorId, testFn) {
@@ -1850,7 +1764,6 @@
     }
   }
   function validarNombre(val) { return val.length >= 2; }
-  // CAMBIO 4: limpiar espacios, guiones, paréntesis y + antes de validar
   function validarTelefono(val) {
     return telefonoRegex.test(val.replace(/[\s\-\(\)\+]/g, ''));
   }
@@ -1886,50 +1799,18 @@
       setTimeout(() => { form._convEnviada = false; }, 1000);
     }
 
-    // CAMBIO 4: tercera línea siempre "Consulta: ..." (aunque el mensaje esté vacío)
     const descripcion = mensaje.value.trim() || 'quiero consultar mi caso laboral';
     const textBase = `Hola, soy ${nombre.value.trim()}.\nMi teléfono es ${telefono.value.trim()}.\nConsulta: ${descripcion}`;
     const textFinal = textBase + obtenerSufijoGA();
     const url = `https://wa.me/543534241527?text=${encodeURIComponent(textFinal)}`;
 
-    // CAMBIO 1: window.open inmediato (sin setTimeout), para que Safari iPhone no lo bloquee
     window.open(url, '_blank');
 
-    // CAMBIO 1: setTimeout SOLO para restaurar el botón
     setTimeout(() => {
       submitBtn.disabled = false;
       submitBtn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar por WhatsApp';
     }, 800);
   });
-
-  // ============================================================
-  // EXIT POPUP
-  // ============================================================
-  let exitPopupShown = false;
-  const exitPopup = document.getElementById('exitPopup');
-  const exitPopupClose = document.getElementById('exitPopupClose');
-
-  function mostrarExitPopup() {
-    if (!exitPopupShown) { exitPopupShown = true; exitPopup.classList.add('show'); }
-  }
-  document.addEventListener('mouseleave', function(e) {
-    if (e.clientY <= 0 && !exitPopupShown) mostrarExitPopup();
-  });
-
-  // CAMBIO 3: en celular, el popup solo aparece tras 30s en la página + subir scroll 50px
-  let lastScrollY = window.scrollY;
-  const tiempoInicio = Date.now();
-  window.addEventListener('scroll', function() {
-    if (window.innerWidth <= 768) {
-      const tiempoEnPagina = Date.now() - tiempoInicio;
-      if (tiempoEnPagina >= 30000 && window.scrollY < lastScrollY - 50 && !exitPopupShown) mostrarExitPopup();
-      lastScrollY = window.scrollY;
-    }
-  }, { passive: true });
-
-  exitPopupClose.addEventListener('click', function() { exitPopup.classList.remove('show'); });
-  exitPopup.addEventListener('click', function(e) { if (e.target === exitPopup) exitPopup.classList.remove('show'); });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') exitPopup.classList.remove('show'); });
 
   // ============================================================
   // CONTADOR DE CASOS (FOMO)
@@ -1951,7 +1832,7 @@
 (function(){
   'use strict';
 
-  /* ---------- CAMBIO 3: gclid/gbraid/wbraid en sessionStorage ---------- */
+  /* gclid/gbraid/wbraid en sessionStorage */
   try {
     var params = new URLSearchParams(window.location.search);
     ['gclid', 'gbraid', 'wbraid'].forEach(function(k){
@@ -1981,7 +1862,7 @@
 
   aplicarSufijoWhatsApp();
 
-  /* ---------- CAMBIO 1: listener único WhatsApp ---------- */
+  /* listener único WhatsApp */
   var ultimoClicWa = new WeakMap();
 
   document.addEventListener('click', function(e){
@@ -2004,7 +1885,7 @@
     gtag('event', 'click_whatsapp', { ubicacion: ubicacion });
   }, true);
 
-  /* ---------- CAMBIO 2: eventos de interés ---------- */
+  /* eventos de interés */
   var unaVez = {};
 
   function disparar(nombre, params) {
@@ -2046,18 +1927,6 @@
     }, { once: true });
   }
 
-  /* popup_salida_visto */
-  var ep = document.getElementById('exitPopup');
-  if (ep && window.MutationObserver) {
-    var moPop = new MutationObserver(function(){
-      if (ep.classList.contains('show')) {
-        disparar('popup_salida_visto');
-        moPop.disconnect();
-      }
-    });
-    moPop.observe(ep, { attributes: true, attributeFilter: ['class'] });
-  }
-
   /* cta_formulario */
   document.addEventListener('click', function(e){
     var a = e.target.closest('a[href="#contacto"], a[href="#art-destacado"]');
@@ -2067,7 +1936,7 @@
     gtag('event', 'cta_formulario', { ubicacion: ubicacion });
   }, true);
 
-  /* Re-aplicar sufijo si se agregan enlaces dinámicos (por las dudas) */
+  /* Re-aplicar sufijo si se agregan enlaces dinámicos */
   if (window.MutationObserver) {
     var moLinks = new MutationObserver(function(){
       aplicarSufijoWhatsApp();
@@ -2077,7 +1946,7 @@
 })();
 
 /* ============================================================
-   CAMBIO 3: IntersectionObserver para botón flotante y pop-up
+   IntersectionObserver para botón flotante
    Cambia el mensaje de WhatsApp según la sección visible
    ============================================================ */
 (function(){
@@ -2090,10 +1959,9 @@
 
   function actualizarEnlacesWhatsApp(mensaje) {
     var textoCodificado = encodeURIComponent(mensaje);
-    var enlaces = document.querySelectorAll('.wa-float, #exitPopup a[href^="https://wa.me/"]');
+    var enlaces = document.querySelectorAll('.wa-float');
     enlaces.forEach(function(a) {
       var base = 'https://wa.me/543534241527?text=';
-      // Preservar posible sufijo GA si existe
       var sufijoGA = '';
       var hrefActual = a.getAttribute('href');
       if (hrefActual && hrefActual.indexOf('%20(Ref%3A%20GA)') !== -1) {
@@ -2111,7 +1979,6 @@
   idsObservar.forEach(function(id) {
     var el = document.getElementById(id);
     if (!el) return;
-    // CAMBIO 2: threshold 0 y rootMargin -45%/-45% (detecta la sección que cruza el centro del viewport)
     var obs = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         visibilidad[entry.target.id] = entry.isIntersecting;
@@ -2123,7 +1990,6 @@
 
   function recalcularMensaje() {
     var nuevoMensaje;
-    // CAMBIO 2: solo 'despidos' activa el mensaje de despidos (ya no 'servicios')
     if (visibilidad['despidos']) {
       nuevoMensaje = MENSAJE_DESPIDOS;
     } else if (visibilidad['art-destacado']) {
@@ -2137,7 +2003,6 @@
     }
   }
 
-  // Inicializar con mensaje general
   actualizarEnlacesWhatsApp(MENSAJE_GENERAL);
 })();
 </script>
