@@ -209,32 +209,70 @@
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
     .menu-toggle span { display: block; width: 24px; height: 2.5px; background: var(--white); border-radius: 4px; transition: var(--transition); }
 
-    /* HERO */
+    /* ============================================================
+       HERO — IMAGEN OPTIMIZADA (Opción B)
+       - Desktop: imagen a la derecha nítida + degradado horizontal
+       - Móvil: degradado vertical parejo, sin zoom deformante
+       - iOS: background-attachment: scroll para evitar bug de scroll
+    ============================================================ */
     .hero {
-      min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
-      padding-top: 74px; background: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 74px;
+      background: var(--navy);
     }
+
     .hero-bg-image {
-      position: absolute; inset: 0;
+      position: absolute;
+      inset: 0;
       background-image: url('https://i.imgur.com/tVjPdE6.png');
-      background-size: cover; background-position: center 30%;
-      opacity: 0.70; filter: grayscale(0.05) blur(0px); z-index: 0; transform: scale(1.02);
+      background-size: cover;
+      background-position: center 25%;
+      background-repeat: no-repeat;
+      background-attachment: scroll; /* iOS safe */
+      opacity: 1;
+      z-index: 0;
     }
-    @media (max-width: 768px) {
-      .hero-bg-image { background-position: center 20%; transform: scale(1.15); opacity: 0.75; filter: grayscale(0) blur(0px); }
-    }
-    @media (max-width: 480px) {
-      .hero-bg-image { background-position: center 15%; transform: scale(1.25); opacity: 0.80; }
-    }
+
     .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.55) 60%, rgba(10, 25, 47, 0.80) 100%);
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(10, 25, 47, 0.94) 0%, rgba(10, 25, 47, 0.78) 45%, rgba(10, 25, 47, 0.55) 100%),
+        linear-gradient(180deg, rgba(10, 25, 47, 0.55) 0%, rgba(10, 25, 47, 0) 30%, rgba(10, 25, 47, 0) 70%, rgba(10, 25, 47, 0.7) 100%);
       z-index: 1;
     }
+
     .hero-inner {
       position: relative; z-index: 2; max-width: 1240px; margin: 0 auto;
       padding: 40px 20px; display: grid; grid-template-columns: 1fr 0.9fr; gap: 50px; align-items: center;
     }
+
+    /* MÓVIL: imagen de fondo con degradado vertical parejo */
+    @media (max-width: 768px) {
+      .hero-bg-image {
+        background-position: center 20%;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(180deg, rgba(10, 25, 47, 0.78) 0%, rgba(10, 25, 47, 0.85) 55%, rgba(10, 25, 47, 0.95) 100%);
+      }
+    }
+
+    /* MÓVIL CHICO: recorte controlado, foco en la parte útil de la imagen */
+    @media (max-width: 480px) {
+      .hero-bg-image {
+        background-position: 55% 12%;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(180deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.88) 50%, rgba(10, 25, 47, 0.96) 100%);
+      }
+    }
+
     .hero-badge {
       display: inline-flex; align-items: center; gap: 10px;
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
@@ -255,36 +293,38 @@
     .hero-title em { font-style: italic; color: var(--gold); }
 
     .hero-sub {
-      font-size: 18px; color: rgba(255,255,255,0.78); line-height: 1.7;
+      font-size: 18px; color: rgba(255,255,255,0.82); line-height: 1.7;
       max-width: 520px; margin-bottom: 30px;
     }
     .hero-sub strong { color: var(--gold); font-weight: 700; }
 
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
 
-    /* BARRA DE CONFIANZA en hero */
     .hero-trust {
       display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
       padding: 16px 0; margin-bottom: 22px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255,255,255,0.10);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
     }
-    .hero-trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.65); font-size: 13px; }
+    .hero-trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 13px; }
     .hero-trust-item svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
     .hero-trust-item strong { color: var(--white); font-weight: 700; }
 
-    /* Hero panel */
     .hero-panel {
-      background: rgba(255,255,255,0.03); backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius-xl); padding: 32px;
+      background: rgba(10, 25, 47, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-xl);
+      padding: 32px;
     }
     .hero-panel-title { font-family: var(--serif); font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-    .hero-panel-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
+    .hero-panel-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 18px; }
     .hero-panel-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .hero-panel-list li {
       display: flex; align-items: center; gap: 12px; padding: 11px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-      color: rgba(255,255,255,0.7); font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.8); font-size: 13px;
     }
     .hero-panel-list li:last-child { border-bottom: none; }
     .hero-panel-list li svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
@@ -301,7 +341,7 @@
     .fomo-item strong { color: var(--white); font-weight: 700; }
     .fomo-divider { width: 1px; height: 28px; background: rgba(255,255,255,0.08); }
 
-    /* CALCULADORAS — movidas arriba */
+    /* CALCULADORAS */
     .calculators { padding: 72px 0; background: var(--white); }
     .calc-tabs {
       display: flex; gap: 6px; background: var(--off-white); padding: 6px;
@@ -448,7 +488,7 @@
     .art-callout p { font-size: 15px; font-weight: 600; color: var(--gold); }
     .art-callout p strong { color: var(--white); font-weight: 700; }
 
-    /* TESTIMONIOS — casos de estudio */
+    /* TESTIMONIOS */
     .testimonials { padding: 80px 0; background: var(--off-white); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
     .testim-card {
@@ -665,7 +705,6 @@
     }
 
     @media (max-width: 520px) {
-      .hero-bg-image { background-position: center 25%; }
       .hero-inner { padding: 32px 12px; gap: 20px; }
       .hero-title { font-size: clamp(24px, 6vw, 30px); margin-bottom: 12px; line-height: 1.15; }
       .hero-sub { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
@@ -675,7 +714,6 @@
     }
 
     @media (max-width: 400px) {
-      .hero-bg-image { background-position: center 35%; transform: scale(1.3); }
       .hero-inner { padding: 24px 12px; gap: 16px; }
       .hero-title { font-size: clamp(22px, 5.5vw, 26px); margin-bottom: 10px; }
       .hero-sub { font-size: 14px; margin-bottom: 16px; }
@@ -760,7 +798,6 @@
         </a>
       </div>
 
-      <!-- BARRA DE CONFIANZA -->
       <div class="hero-trust">
         <div class="hero-trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -792,7 +829,7 @@
   </div>
 </section>
 
-<!-- FOMO BAR — urgencia real -->
+<!-- FOMO BAR -->
 <section class="fomo-bar">
   <div class="container">
     <div class="fomo-inner">
@@ -814,7 +851,7 @@
   </div>
 </section>
 
-<!-- CALCULADORAS — movidas arriba -->
+<!-- CALCULADORAS -->
 <section id="calculadoras" class="calculators">
   <div class="container">
     <div class="text-center fade-up">
@@ -1012,7 +1049,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIOS — casos de estudio -->
+<!-- TESTIMONIOS -->
 <section id="testimonios" class="testimonials">
   <div class="container">
     <div class="text-center fade-up">
@@ -1302,7 +1339,6 @@
   document.getElementById('incapacidadArt')?.addEventListener('change', calcArt);
   document.getElementById('edadArt')?.addEventListener('change', calcArt);
 
-  // FORMULARIO REDUCIDO (nombre + teléfono)
   const form = document.getElementById('contactForm');
   const nombre = document.getElementById('nombre');
   const telefono = document.getElementById('telefono');
