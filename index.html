@@ -273,18 +273,6 @@
     .hero-trust-item svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
     .hero-trust-item strong { color: var(--white); font-weight: 700; }
 
-    /* testimonio corto en hero */
-    .hero-mini-testim {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius); padding: 14px 18px;
-      display: flex; gap: 14px; align-items: center;
-    }
-    .hero-mini-testim .stars { display: flex; gap: 2px; flex-shrink: 0; }
-    .hero-mini-testim .stars svg { width: 13px; height: 13px; fill: var(--gold); color: var(--gold); }
-    .hero-mini-testim p { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.5; }
-    .hero-mini-testim p strong { color: var(--white); }
-
     /* Hero panel */
     .hero-panel {
       background: rgba(255,255,255,0.03); backdrop-filter: blur(16px);
@@ -460,7 +448,7 @@
     .art-callout p { font-size: 15px; font-weight: 600; color: var(--gold); }
     .art-callout p strong { color: var(--white); font-weight: 700; }
 
-    /* TESTIMONIOS — como casos de estudio */
+    /* TESTIMONIOS — casos de estudio */
     .testimonials { padding: 80px 0; background: var(--off-white); }
     .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
     .testim-card {
@@ -682,7 +670,6 @@
       .hero-title { font-size: clamp(24px, 6vw, 30px); margin-bottom: 12px; line-height: 1.15; }
       .hero-sub { font-size: 15px; line-height: 1.6; margin-bottom: 20px; }
       .hero-trust { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .hero-mini-testim { flex-direction: column; align-items: flex-start; gap: 8px; }
       .why-grid { grid-template-columns: 1fr; }
       .btn-primary, .btn-secondary, .btn-outline { font-size: 14px; padding: 12px 24px; min-height: 50px; }
     }
@@ -758,13 +745,12 @@
       <div class="hero-badge">CÓRDOBA · ESPECIALISTAS EN DERECHO LABORAL</div>
 
       <h1 class="hero-title">
-        ¿Te echaron o tuviste un accidente laboral?<br>
+        ¿Te despidieron o tuviste un accidente laboral?<br>
         <em>Cobrá lo que te corresponde.</em>
       </h1>
 
       <p class="hero-sub">
-        Peleamos tu despido o tu reclamo a la ART. <strong>Sin gastar un peso:</strong>
-        cobramos honorarios solo si ganamos.
+        Peleamos tu despido o tu reclamo a la ART. <strong>Cobramos honorarios solo si ganamos.</strong>
       </p>
 
       <div class="hero-actions">
@@ -789,18 +775,6 @@
           <span><strong>$0</strong> hasta que cobrés</span>
         </div>
       </div>
-
-      <!-- TESTIMONIO CORTO -->
-      <div class="hero-mini-testim">
-        <div class="stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p><strong>"Me ofrecían la mitad. Cobré el triple."</strong> — Marcos, operario industrial</p>
-      </div>
     </div>
 
     <div class="hero-visual fade-up" style="animation-delay:.15s">
@@ -808,7 +782,7 @@
         <div class="hero-panel-title">Casos que atendemos</div>
         <div class="hero-panel-sub">Si alguno de estos es tu caso, tenés derecho a reclamar.</div>
         <ul class="hero-panel-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te echaron sin motivo?</strong> Reclamá lo tuyo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te despidieron sin motivo?</strong> Reclamá lo tuyo</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿La ART no te cubrió?</strong> Peleamos tu accidente</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Te dieron el alta y no estás bien?</strong> La impugnamos</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> <strong>¿Trabajaste en negro?</strong> Igual podés reclamar</li>
