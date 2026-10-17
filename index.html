@@ -9,6 +9,27 @@
   <meta name="author" content="Barrionuevo Masud & Asoc.">
   <meta name="geo.region" content="AR-X">
 
+  <!-- Open Graph (preview en WhatsApp / Facebook / LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Barrionuevo Masud & Asoc.">
+  <meta property="og:title" content="¿Te despidieron o tuviste un accidente laboral? Cobrá lo que te corresponde">
+  <meta property="og:description" content="Abogados laborales en Córdoba. Despidos y reclamos a la ART. Consulta gratuita. Honorarios solo si ganás.">
+  <meta property="og:url" content="https://barrionuevomasud.com">
+  <meta property="og:image" content="https://i.imgur.com/tVjPdE6.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¿Te despidieron o tuviste un accidente laboral?">
+  <meta name="twitter:description" content="Abogados laborales en Córdoba. Consulta gratuita. Honorarios solo si ganás.">
+  <meta name="twitter:image" content="https://i.imgur.com/tVjPdE6.png">
+
+  <!-- Favicon SVG embebido (balanza) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' rx='10' fill='%230A192F'/%3E%3Crect x='24.5' y='13' width='3' height='22' rx='1.5' fill='%23B0C4DE'/%3E%3Crect x='16' y='41' width='20' height='3.5' rx='1.75' fill='%23B0C4DE'/%3E%3Crect x='24.5' y='35' width='3' height='7' rx='1.5' fill='%23B0C4DE'/%3E%3Crect x='6' y='20' width='40' height='3' rx='1.5' fill='%23F0F4F8'/%3E%3Ccircle cx='26' cy='21.5' r='4.5' fill='%23B0C4DE'/%3E%3Ccircle cx='26' cy='21.5' r='2' fill='%23F0F4F8'/%3E%3Cline x1='8' y1='23' x2='8' y2='29' stroke='%23B0C4DE' stroke-width='1.5'/%3E%3Cpath d='M3 29 Q8 36 13 29' fill='none' stroke='%23B0C4DE' stroke-width='2'/%3E%3Cline x1='3' y1='29' x2='13' y2='29' stroke='%23B0C4DE' stroke-width='1.5'/%3E%3Cline x1='44' y1='23' x2='44' y2='29' stroke='%23B0C4DE' stroke-width='1.5'/%3E%3Cpath d='M39 29 Q44 36 49 29' fill='none' stroke='%23B0C4DE' stroke-width='2'/%3E%3Cline x1='39' y1='29' x2='49' y2='29' stroke='%23B0C4DE' stroke-width='1.5'/%3E%3C/svg%3E">
+
+  <!-- Preload de la imagen del hero (evita el azul vacío al cargar) -->
+  <link rel="preload" as="image" href="https://i.imgur.com/tVjPdE6.png">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1749966760"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -24,6 +45,7 @@
     "name": "Barrionuevo Masud & Asoc. Estudio Jurídico",
     "description": "Abogados especialistas en despidos injustificados y reclamos a la ART en Córdoba Capital. Consulta gratuita. Honorarios solo si ganás.",
     "url": "https://barrionuevomasud.com",
+    "telephone": "+5493513496048",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Tucumán 41, Oficina 43",
@@ -33,7 +55,12 @@
       "addressCountry": "AR"
     },
     "geo": { "@type": "GeoCoordinates", "latitude": -31.4143, "longitude": -64.1885 },
-    "areaServed": { "@type": "City", "name": "Córdoba" },
+    "areaServed": [
+      { "@type": "City", "name": "Córdoba" },
+      { "@type": "City", "name": "Río Cuarto" },
+      { "@type": "City", "name": "Villa María" },
+      { "@type": "City", "name": "San Francisco" }
+    ],
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "20:00" }
     ],
@@ -111,7 +138,7 @@
     .text-center { text-align: center; }
     .mx-auto { margin-left: auto; margin-right: auto; }
 
-    /* BOTONES — acento dorado en el principal */
+    /* BOTONES */
     .btn-primary {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       background: var(--gold); color: var(--navy);
@@ -209,67 +236,42 @@
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
     .menu-toggle span { display: block; width: 24px; height: 2.5px; background: var(--white); border-radius: 4px; transition: var(--transition); }
 
-    /* ============================================================
-       HERO — IMAGEN OPTIMIZADA (Opción B)
-       - Desktop: imagen a la derecha nítida + degradado horizontal
-       - Móvil: degradado vertical parejo, sin zoom deformante
-       - iOS: background-attachment: scroll para evitar bug de scroll
-    ============================================================ */
+    /* HERO */
     .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding-top: 74px;
-      background: var(--navy);
+      min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden;
+      padding-top: 74px; background: var(--navy);
     }
-
     .hero-bg-image {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background-image: url('https://i.imgur.com/tVjPdE6.png');
       background-size: cover;
       background-position: center 25%;
       background-repeat: no-repeat;
-      background-attachment: scroll; /* iOS safe */
+      background-attachment: scroll;
       opacity: 1;
       z-index: 0;
     }
-
     .hero-overlay {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background:
         linear-gradient(90deg, rgba(10, 25, 47, 0.94) 0%, rgba(10, 25, 47, 0.78) 45%, rgba(10, 25, 47, 0.55) 100%),
         linear-gradient(180deg, rgba(10, 25, 47, 0.55) 0%, rgba(10, 25, 47, 0) 30%, rgba(10, 25, 47, 0) 70%, rgba(10, 25, 47, 0.7) 100%);
       z-index: 1;
     }
-
     .hero-inner {
       position: relative; z-index: 2; max-width: 1240px; margin: 0 auto;
       padding: 40px 20px; display: grid; grid-template-columns: 1fr 0.9fr; gap: 50px; align-items: center;
     }
-
-    /* MÓVIL: imagen de fondo con degradado vertical parejo */
     @media (max-width: 768px) {
-      .hero-bg-image {
-        background-position: center 20%;
-      }
+      .hero-bg-image { background-position: center 20%; }
       .hero-overlay {
-        background:
-          linear-gradient(180deg, rgba(10, 25, 47, 0.78) 0%, rgba(10, 25, 47, 0.85) 55%, rgba(10, 25, 47, 0.95) 100%);
+        background: linear-gradient(180deg, rgba(10, 25, 47, 0.78) 0%, rgba(10, 25, 47, 0.85) 55%, rgba(10, 25, 47, 0.95) 100%);
       }
     }
-
-    /* MÓVIL CHICO: recorte controlado, foco en la parte útil de la imagen */
     @media (max-width: 480px) {
-      .hero-bg-image {
-        background-position: 55% 12%;
-      }
+      .hero-bg-image { background-position: 55% 12%; }
       .hero-overlay {
-        background:
-          linear-gradient(180deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.88) 50%, rgba(10, 25, 47, 0.96) 100%);
+        background: linear-gradient(180deg, rgba(10, 25, 47, 0.80) 0%, rgba(10, 25, 47, 0.88) 50%, rgba(10, 25, 47, 0.96) 100%);
       }
     }
 
@@ -307,7 +309,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.10);
     }
     .hero-trust-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 13px; }
-    .hero-trust-item svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
+    .hero-trust-item svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
     .hero-trust-item strong { color: var(--white); font-weight: 700; }
 
     .hero-panel {
@@ -330,7 +332,7 @@
     .hero-panel-list li svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; }
     .hero-panel-list li strong { color: var(--white); }
 
-    /* FOMO BAR — urgencia real */
+    /* FOMO BAR */
     .fomo-bar {
       background: var(--deep-blue); padding: 16px 0;
       border-top: 1px solid rgba(255,255,255,0.03); border-bottom: 1px solid rgba(255,255,255,0.03);
@@ -379,6 +381,35 @@
     .result-value { font-family: var(--serif); font-size: 28px; font-weight: 800; color: var(--white); }
     .result-note { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px; }
     .result-detail { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 10px; }
+
+    /* "Cómo calculamos esto" */
+    .calc-how {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+    .calc-how summary {
+      cursor: pointer;
+      color: var(--blue-accent);
+      font-weight: 600;
+      list-style: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .calc-how summary::-webkit-details-marker { display: none; }
+    .calc-how summary::after {
+      content: '+';
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+    .calc-how[open] summary::after { content: '−'; }
+    .calc-how p {
+      margin-top: 6px;
+      color: #627D98;
+      line-height: 1.55;
+      font-size: 12px;
+    }
+    .calc-how a { color: var(--blue-accent); text-decoration: underline; }
 
     /* SERVICIOS */
     .services { padding: 80px 0; background: var(--off-white); }
@@ -585,6 +616,33 @@
     .contact-guarantees .item p { font-size: 13px; color: rgba(255,255,255,0.65); }
     .contact-guarantees .item strong { color: var(--white); }
 
+    .contact-channels { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .contact-channel {
+      display: flex; align-items: center; gap: 12px;
+      color: rgba(255,255,255,0.7); font-size: 14px;
+      padding: 10px 12px; border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.02);
+      transition: var(--transition);
+    }
+    .contact-channel:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: var(--white); }
+    .contact-channel svg { width: 18px; height: 18px; color: var(--gold); flex-shrink: 0; }
+    .contact-channel strong { color: var(--white); font-weight: 700; }
+
+    .contact-zonas {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .contact-zonas p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.6;
+    }
+    .contact-zonas strong { color: rgba(255,255,255,0.75); }
+
     .form-card { background: var(--white); border-radius: var(--radius-xl); padding: 36px 32px; box-shadow: var(--shadow); }
     .form-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
     .form-card .form-intro { font-size: 13px; color: #627D98; margin-bottom: 20px; line-height: 1.5; }
@@ -621,6 +679,14 @@
     }
     .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(201, 169, 97, 0.4); background: var(--gold-dark); }
     .form-note { font-size: 11px; color: #627D98; text-align: center; margin-top: 12px; line-height: 1.5; }
+    .form-redirect-note {
+      font-size: 11px;
+      color: var(--blue-accent);
+      text-align: center;
+      margin-top: 8px;
+      line-height: 1.5;
+      font-weight: 500;
+    }
     .form-matricula {
       display: flex; align-items: center; justify-content: center; gap: 6px;
       font-size: 11px; color: #627D98; margin-top: 14px; padding-top: 14px;
@@ -643,6 +709,14 @@
       font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 8px;
     }
     .footer-matricula svg { width: 12px; height: 12px; color: var(--gold); }
+    .footer-zonas {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .footer-zonas strong { color: rgba(255,255,255,0.55); font-weight: 600; }
 
     /* WHATSAPP FLOTANTE */
     .wa-float {
@@ -655,9 +729,37 @@
     .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45); }
     .wa-float svg { width: 34px; height: 34px; fill: white; }
     @keyframes pop-in { from { opacity:0; transform: scale(0); } to { opacity:1; transform: scale(1); } }
+
+    /* BOTÓN VOLVER ARRIBA (móvil) */
+    .back-to-top {
+      position: fixed;
+      bottom: 96px;
+      right: 28px;
+      z-index: 998;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(10, 25, 47, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--gold);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .back-to-top.show { display: flex; }
+    .back-to-top:hover { background: rgba(10, 25, 47, 0.95); transform: translateY(-2px); }
+    .back-to-top svg { width: 22px; height: 22px; }
+
     @media (max-width: 480px) {
       .wa-float { width: 54px; height: 54px; bottom: 16px; right: 16px; }
       .wa-float svg { width: 30px; height: 30px; }
+      .back-to-top { bottom: 82px; right: 18px; width: 42px; height: 42px; }
+      .back-to-top svg { width: 20px; height: 20px; }
     }
 
     /* RESPONSIVE */
@@ -767,6 +869,7 @@
       <a href="#servicios" class="nav-link">Servicios</a>
       <a href="#testimonios" class="nav-link">Casos</a>
       <a href="#faq" class="nav-link">FAQ</a>
+      <a href="tel:+5493513496048" class="nav-link" aria-label="Llamar al estudio">Llamar</a>
       <a href="#contacto" class="nav-link nav-cta">Consulta Gratuita</a>
     </nav>
   </div>
@@ -798,20 +901,33 @@
         </a>
       </div>
 
+      <!-- Barra de confianza con íconos diferenciados -->
       <div class="hero-trust">
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
           <span><strong>+200</strong> casos resueltos</span>
         </div>
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
           <span><strong>98%</strong> de éxito</span>
         </div>
         <div class="hero-trust-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg>
           <span><strong>$0</strong> hasta que cobrés</span>
         </div>
       </div>
+
+      <!--
+        PENDIENTE GOOGLE REVIEWS
+        Cuando tengas el Place ID de tu ficha de Google Business,
+        reemplazá PLACE_ID_AQUI y descomentá este bloque para mostrar
+        el badge de estrellas real en el hero.
+
+      <a href="https://search.google.com/local/reviews?placeid=PLACE_ID_AQUI" target="_blank" rel="noopener" class="hero-google-badge">
+        <span class="hero-google-stars">★★★★★</span>
+        <span><strong>4.9</strong> · Ver reseñas en Google</span>
+      </a>
+      -->
     </div>
 
     <div class="hero-visual fade-up" style="animation-delay:.15s">
@@ -829,7 +945,7 @@
   </div>
 </section>
 
-<!-- FOMO BAR -->
+<!-- FOMO BAR con horario -->
 <section class="fomo-bar">
   <div class="container">
     <div class="fomo-inner">
@@ -844,8 +960,8 @@
       </div>
       <div class="fomo-divider"></div>
       <div class="fomo-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <span><strong>$0</strong> de honorarios anticipados</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Lun a Vie · <strong>8 a 20 h</strong></span>
       </div>
     </div>
   </div>
@@ -898,6 +1014,10 @@
           <div class="result-detail" id="detalleDespido"></div>
           <div class="result-note">*No incluye SAC ni vacaciones. Consultá para cálculo exacto.</div>
         </div>
+        <details class="calc-how">
+          <summary>¿Cómo calculamos esto?</summary>
+          <p>La estimación toma como base el <strong>art. 245 de la Ley de Contrato de Trabajo (20.744)</strong>: un mes de sueldo por cada año de antigüedad. A eso se le suma preaviso, SAC sobre preaviso y multas por falta de registro (Ley 24.013). Es un cálculo orientativo: el monto final depende de tu liquidación real, categoría y convenio. <a href="#contacto">Consultanos para el cálculo exacto</a>.</p>
+        </details>
         <a href="https://wa.me/5493513496048?text=Hola%2C%20me%20despidieron%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_despido">Solicitar cálculo exacto</a>
       </div>
     </div>
@@ -935,6 +1055,10 @@
           <div class="result-detail" id="detalleArt"></div>
           <div class="result-note">*Cálculo estimado según Ley 24.557. Consultá para evaluación precisa.</div>
         </div>
+        <details class="calc-how">
+          <summary>¿Cómo calculamos esto?</summary>
+          <p>La estimación se basa en el <strong>art. 14 de la Ley de Riesgos del Trabajo (24.557)</strong>: ingreso base mensual × 53 × porcentaje de incapacidad, con un piso y techo según edad. A eso se le puede sumar daño moral y secuelas por vía judicial. El monto real depende del porcentaje de incapacidad que determine la Comisión Médica. <a href="#contacto">Consultanos para revisar tu caso</a>.</p>
+        </details>
         <a href="https://wa.me/5493513496048?text=Hola%2C%20tuve%20un%20accidente%20laboral%20o%20problema%20con%20la%20ART%20y%20quiero%20consultar%20mi%20caso" class="btn-primary" style="margin-top:18px; justify-content:center; width:100%;" data-ubicacion="calc_art">Revisar mi caso con ART</a>
       </div>
     </div>
@@ -1110,7 +1234,7 @@
       <p class="subtitle mx-auto">No necesitás saber de leyes ni tener experiencia en trámites. Nos ocupamos de cada etapa.</p>
     </div>
     <div class="steps">
-      <div class="step fade-up"><div class="num">1</div><h3>Contanos tu caso</h3><p>Por WhatsApp, respondemos en minutos.</p></div>
+      <div class="step fade-up"><div class="num">1</div><h3>Contanos tu caso</h3><p>Por WhatsApp o llamada, respondemos en minutos.</p></div>
       <div class="step fade-up"><div class="num">2</div><h3>Te decimos cuánto te corresponde</h3><p>Evaluación sin cargo y sin compromiso.</p></div>
       <div class="step fade-up"><div class="num">3</div><h3>Nosotros nos encargamos de todo</h3><p>Vos no hacés nada. Nosotros accionamos.</p></div>
       <div class="step fade-up"><div class="num">4</div><h3>Vos cobrás</h3><p>Nosotros recién ahí cobramos.</p></div>
@@ -1127,8 +1251,24 @@
         <h2 class="title" style="font-size:30px;">Preguntas<br>Frecuentes</h2>
         <p class="subtitle">Las dudas más comunes de los trabajadores de Córdoba antes de consultar.</p>
         <div style="margin-top:24px; display:flex; flex-direction:column; gap:12px;">
-          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Teléfono</strong><p style="font-size:14px; font-weight:600;"><a href="https://wa.me/5493513496048?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="faq_telefono" style="color:var(--navy);">WhatsApp: (351) 349-6048</a></p></div></div>
-          <div style="display:flex; align-items:center; gap:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong><p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p></div></div>
+          <div style="display:flex; align-items:center; gap:14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Teléfono / WhatsApp</strong>
+              <p style="font-size:14px; font-weight:600;">
+                <a href="tel:+5493513496048" style="color:var(--navy);">(351) 349-6048</a>
+                <span style="color:#B0C4DE; margin:0 4px;">·</span>
+                <a href="https://wa.me/5493513496048?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="faq_telefono" style="color:var(--blue-accent);">WhatsApp</a>
+              </p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong style="font-size:12px; color:#627D98; text-transform:uppercase; letter-spacing:0.5px;">Córdoba</strong>
+              <p style="font-size:14px; font-weight:600;">Tucumán 41, Oficina 43</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="faq-list fade-up">
@@ -1155,11 +1295,28 @@
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><p><strong>Sin honorarios anticipados.</strong></p></div>
           <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p><strong>Respuesta rápida.</strong> En minutos.</p></div>
         </div>
-        <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.55); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="https://wa.me/5493513496048?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" data-ubicacion="contacto" style="color:rgba(255,255,255,0.55);">WhatsApp: (351) 349-6048</a></div>
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.55); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Córdoba Capital y toda la provincia</div>
-          <div style="display:flex; align-items:center; gap:12px; color:rgba(255,255,255,0.55); font-size:14px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Tucumán 41, Oficina 43, Córdoba</div>
+
+        <!-- Canales clickeables -->
+        <div class="contact-channels">
+          <a href="tel:+5493513496048" class="contact-channel" data-ubicacion="contacto_tel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Llamar: <strong>(351) 349-6048</strong></span>
+          </a>
+          <a href="https://wa.me/5493513496048?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="contact-channel" data-ubicacion="contacto_wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.504 3.935 1.389 5.609L.021 23.4l5.936-1.346A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.367l-.357-.212-3.523.799.843-3.424-.232-.371A9.818 9.818 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+            <span>WhatsApp directo</span>
+          </a>
+          <a href="https://www.google.com/maps?q=Tucum%C3%A1n+41,+Oficina+43,+C%C3%B3rdoba" target="_blank" rel="noopener" class="contact-channel" data-ubicacion="contacto_maps">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Tucumán 41, Oficina 43 · Córdoba</span>
+          </a>
         </div>
+
+        <!-- Zonas de atención -->
+        <div class="contact-zonas">
+          <p><strong>Atendemos en:</strong> Córdoba Capital · Río Cuarto · Villa María · San Francisco · Carlos Paz · Alta Gracia y toda la provincia de Córdoba.</p>
+        </div>
+
         <div style="margin-top:16px; border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,0.04);">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.9949217348235!2d-64.19068162539712!3d-31.414265996147062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2821401669f%3A0x164b7153a4dc6fca!2sTucum%C3%A1n%2041%2C%20X5000JQD%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1783605899022!5m2!1ses-419!2sar" width="100%" height="180" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación del estudio en Tucumán 41, Oficina 43, Córdoba"></iframe>
         </div>
@@ -1183,6 +1340,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
             Enviar por WhatsApp
           </button>
+          <p class="form-redirect-note">Se abre WhatsApp con tu mensaje listo. Solo tenés que enviar.</p>
           <p class="form-note">Tus datos son confidenciales. Esta consulta no genera ningún compromiso.</p>
           <div class="form-matricula">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
@@ -1210,12 +1368,16 @@
       <a href="#testimonios">Casos</a>
       <a href="#faq">FAQ</a>
       <a href="#contacto">Contacto</a>
+      <a href="tel:+5493513496048">Llamar</a>
     </nav>
     <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
       <p class="footer-copy">&copy; 2025 Barrionuevo Masud &amp; Asoc. – Estudio Jurídico.<br>Atendemos en toda la provincia de Córdoba.</p>
       <div class="footer-matricula">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
         Matriculados en el Colegio de Abogados de Córdoba
+      </div>
+      <div class="footer-zonas">
+        <strong>Zonas:</strong> Córdoba Capital · Río Cuarto · Villa María · San Francisco · Carlos Paz · Alta Gracia
       </div>
     </div>
   </div>
@@ -1225,6 +1387,11 @@
 <a href="https://wa.me/5493513496048?text=Hola%2C%20quiero%20consultar%20mi%20caso%20laboral" target="_blank" rel="noopener" class="wa-float" aria-label="Consultar por WhatsApp" data-ubicacion="boton_flotante">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.504 3.935 1.389 5.609L.021 23.4l5.936-1.346A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.367l-.357-.212-3.523.799.843-3.424-.232-.371A9.818 9.818 0 0 1 2.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
 </a>
+
+<!-- BOTÓN VOLVER ARRIBA -->
+<button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
 
 <script>
   const menuToggle = document.getElementById('menuToggle');
@@ -1277,6 +1444,16 @@
     header.style.background = window.scrollY > 60 ? 'rgba(10, 25, 47, 0.99)' : 'rgba(10, 25, 47, 0.97)';
     header.style.boxShadow = window.scrollY > 60 ? '0 2px 24px rgba(10,25,47,0.3)' : 'none';
   }, { passive: true });
+
+  // Botón volver arriba (aparece después de 400px de scroll)
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) { backToTop.classList.add('show'); }
+    else { backToTop.classList.remove('show'); }
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   function calcDespido() {
     let sueldo = parseFloat(document.getElementById('sueldoDespido').value) || 0;
@@ -1431,6 +1608,14 @@
     var ubicacion = a.getAttribute('data-ubicacion') || 'sin_ubicacion';
     gtag('event', 'conversion', { send_to: 'AW-1749966760/SorCNSK47wcEPz4vphB', value: 1.0, currency: 'USD', transport_type: 'beacon' });
     gtag('event', 'click_whatsapp', { ubicacion: ubicacion });
+  }, true);
+
+  // Clic en teléfono → evento de tracking
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="tel:"]');
+    if (!a) return;
+    var ubicacion = a.getAttribute('data-ubicacion') || 'sin_ubicacion';
+    gtag('event', 'click_telefono', { ubicacion: ubicacion });
   }, true);
 
   var unaVez = {};
